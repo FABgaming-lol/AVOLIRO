@@ -8,12 +8,10 @@ export default function Navbar() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    const handleScroll = () => {
-      setSolid(window.scrollY > 40)
-    }
-    handleScroll()
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const onScroll = () => setSolid(window.scrollY > 40)
+    onScroll()
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   const handleBrandClick = () => {
@@ -22,9 +20,7 @@ export default function Navbar() {
     setMobileOpen(false)
   }
 
-  const handleNavClick = () => {
-    setMobileOpen(false)
-  }
+  const closeMobile = () => setMobileOpen(false)
 
   return (
     <header className={`nav-shell ${solid ? 'nav-solid' : ''}`}>
@@ -35,26 +31,26 @@ export default function Navbar() {
         </button>
 
         <nav className="nav-links-desktop">
-          <NavLink to="/" className="nav-link" onClick={handleNavClick}>
+          <NavLink to="/" className="nav-link" onClick={closeMobile}>
             Home
           </NavLink>
-          <NavLink to="/work" className="nav-link" onClick={handleNavClick}>
+          <NavLink to="/work" className="nav-link" onClick={closeMobile}>
             Work
           </NavLink>
-          <NavLink to="/services" className="nav-link" onClick={handleNavClick}>
+          <NavLink to="/services" className="nav-link" onClick={closeMobile}>
             Services
           </NavLink>
-          <NavLink to="/about" className="nav-link" onClick={handleNavClick}>
+          <NavLink to="/about" className="nav-link" onClick={closeMobile}>
             Studio
           </NavLink>
-          <NavLink to="/contact" className="nav-link" onClick={handleNavClick}>
+          <NavLink to="/contact" className="nav-link" onClick={closeMobile}>
             Contact
           </NavLink>
         </nav>
 
         <button
           className="nav-toggle"
-          onClick={() => setMobileOpen((open) => !open)}
+          onClick={() => setMobileOpen((v) => !v)}
           aria-label="Toggle navigation"
         >
           <div className="nav-toggle-lines">
@@ -67,19 +63,19 @@ export default function Navbar() {
 
       {mobileOpen && (
         <div className="nav-mobile-menu">
-          <NavLink to="/" className="nav-mobile-item" onClick={handleNavClick}>
+          <NavLink to="/" className="nav-mobile-item" onClick={closeMobile}>
             Home
           </NavLink>
-          <NavLink to="/work" className="nav-mobile-item" onClick={handleNavClick}>
+          <NavLink to="/work" className="nav-mobile-item" onClick={closeMobile}>
             Work
           </NavLink>
-          <NavLink to="/services" className="nav-mobile-item" onClick={handleNavClick}>
+          <NavLink to="/services" className="nav-mobile-item" onClick={closeMobile}>
             Services
           </NavLink>
-          <NavLink to="/about" className="nav-mobile-item" onClick={handleNavClick}>
+          <NavLink to="/about" className="nav-mobile-item" onClick={closeMobile}>
             Studio
           </NavLink>
-          <NavLink to="/contact" className="nav-mobile-item" onClick={handleNavClick}>
+          <NavLink to="/contact" className="nav-mobile-item" onClick={closeMobile}>
             Contact
           </NavLink>
         </div>

@@ -1,7 +1,13 @@
 import { useRef, useEffect } from 'react'
 import './Lightning.css'
 
-const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 }) => {
+export default function Lightning({
+  hue = 220,
+  xOffset = 0,
+  speed = 1,
+  intensity = 1,
+  size = 1
+}) {
   const canvasRef = useRef(null)
 
   useEffect(() => {
@@ -71,7 +77,6 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
         float b = hash12(ip + vec2(1.0, 0.0));
         float c = hash12(ip + vec2(0.0, 1.0));
         float d = hash12(ip + vec2(1.0, 1.0));
-
         vec2 t = smoothstep(0.0, 1.0, fp);
         return mix(mix(a, b, t.x), mix(c, d, t.x), t.y);
       }
@@ -110,11 +115,10 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
 
     const compileShader = (source, type) => {
       const shader = gl.createShader(type)
-      if (!shader) return null
       gl.shaderSource(shader, source)
       gl.compileShader(shader)
       if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-        console.error('Shader compile error:', gl.getShaderInfoLog(shader))
+        console.error(gl.getShaderInfoLog(shader))
         gl.deleteShader(shader)
         return null
       }
@@ -126,14 +130,15 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
     if (!vertexShader || !fragmentShader) return
 
     const program = gl.createProgram()
-    if (!program) return
     gl.attachShader(program, vertexShader)
     gl.attachShader(program, fragmentShader)
     gl.linkProgram(program)
+
     if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-      console.error('Program linking error:', gl.getProgramInfoLog(program))
+      console.error(gl.getProgramInfoLog(program))
       return
     }
+
     gl.useProgram(program)
 
     const vertices = new Float32Array([
@@ -144,8 +149,9 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
        1, -1,
        1,  1
     ])
-    const vertexBuffer = gl.createBuffer()
-    gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer)
+
+    const buffer = gl.createBuffer()
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
     gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW)
 
     const aPosition = gl.getAttribLocation(program, 'aPosition')
@@ -160,13 +166,13 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
     const uIntensityLocation = gl.getUniformLocation(program, 'uIntensity')
     const uSizeLocation = gl.getUniformLocation(program, 'uSize')
 
-    const startTime = performance.now()
+    const start = performance.now()
     const render = () => {
       resizeCanvas()
       gl.viewport(0, 0, canvas.width, canvas.height)
       gl.uniform2f(iResolutionLocation, canvas.width, canvas.height)
-      const currentTime = performance.now()
-      gl.uniform1f(iTimeLocation, (currentTime - startTime) / 1000.0)
+      const t = (performance.now() - start) / 1000
+      gl.uniform1f(iTimeLocation, t)
       gl.uniform1f(uHueLocation, hue)
       gl.uniform1f(uXOffsetLocation, xOffset)
       gl.uniform1f(uSpeedLocation, speed)
@@ -175,7 +181,7 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
       gl.drawArrays(gl.TRIANGLES, 0, 6)
       requestAnimationFrame(render)
     }
-    requestAnimationFrame(render)
+    render()
 
     return () => {
       window.removeEventListener('resize', resizeCanvas)
@@ -184,5 +190,3 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
 
   return <canvas ref={canvasRef} className="lightning-container" />
 }
-
-export default Lightning

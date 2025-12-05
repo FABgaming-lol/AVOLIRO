@@ -2,16 +2,18 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Footer() {
+  const year = new Date().getFullYear()
+
   return (
     <footer className="footer-shell">
       <div className="footer-inner">
         <div className="footer-brand">
           <strong style={{ letterSpacing: '0.12em' }}>AVOLIRO</strong>
           <p className="footer-tagline">
-            Design, technology & strategy for growing companies.
+            Design, technology &amp; strategy for growing companies.
           </p>
+          <span className="footer-meta">© {year} Avoliro Studio</span>
         </div>
-
         <div className="footer-links">
           <Link to="/services">Services</Link>
           <Link to="/work">Work</Link>

@@ -19,24 +19,14 @@ export default function Home() {
 
   return (
     <main className="page-shell">
-      {/* Hero with lightning background & parallax */}
-      <section
-        className="hero-block hero-with-lightning"
-        onMouseMove={handleMouseMove}
-      >
+      <section className="hero-block" onMouseMove={handleMouseMove}>
         <div
           className="hero-lightning-layer"
           style={{
             transform: `translate3d(${parallax.x}px, ${parallax.y}px, 0) scale(1.06)`
           }}
         >
-          <Lightning
-            hue={220}      // Electric royal blue
-            xOffset={0}
-            speed={1}
-            intensity={1}
-            size={1}
-          />
+          <Lightning hue={220} xOffset={0} speed={1} intensity={1} size={1} />
         </div>
 
         <div className="hero-content">
@@ -55,7 +45,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            Bold, minimal web experiences with real presence.
+            Bold, minimal web & brand experiences for real businesses.
           </motion.h1>
 
           <motion.p
@@ -64,8 +54,8 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.12, ease: 'easeOut' }}
           >
-            Avoliro builds focused, high-impact sites for teams who want a strong first
-            impression without visual clutter or over-design.
+            Design, technology & strategy for growing companies. Avoliro builds clean,
+            focused digital touchpoints that help your work make sense to the right people.
           </motion.p>
 
           <motion.div
@@ -74,7 +64,7 @@ export default function Home() {
             transition={{ duration: 0.75, delay: 0.2, ease: 'easeOut' }}
           >
             <Link to="/contact" className="btn-primary">
-              Start project <span>↗</span>
+              Start a project <span>↗</span>
             </Link>{' '}
             <Link to="/work" className="btn-ghost">
               View selected work
@@ -84,69 +74,47 @@ export default function Home() {
 
         <div className="hero-scroll-indicator">
           <span>Scroll</span>
-          <span className="hero-scroll-arrow" />
         </div>
       </section>
 
-      {/* Services */}
       <SectionReveal className="section-block" id="services">
         <div className="section-header">
           <div>
             <h2 className="section-title">Services</h2>
             <p className="section-desc">
-              A clear, minimal set of offers. Simple to understand, easy to extend later.
+              A focus on a few things done well: digital presence, full-stack systems and brand
+              visuals that support how you work.
             </p>
           </div>
         </div>
 
         <div className="grid grid-3">
-          <motion.article
-            className="card"
-            whileHover={{
-              rotateX: 4,
-              translateY: -6,
-              boxShadow: '0px 22px 60px rgba(0,0,0,0.9)'
-            }}
-            transition={{ type: 'spring', stiffness: 170, damping: 18 }}
-          >
-            <div className="card-label">01</div>
-            <h3 className="card-title">Launch site</h3>
+          <article className="card">
+            <div className="card-label">Web & Product</div>
+            <h3 className="card-title">Company & product websites</h3>
             <p className="card-body">
-              A strong one-page site with a bold hero, concise story and clear call-to-action.
+              Clear, fast, modern sites for companies and products that need to explain what they
+              do without noise.
             </p>
-          </motion.article>
+          </article>
 
-          <motion.article
-            className="card"
-            whileHover={{
-              rotateX: 4,
-              translateY: -6,
-              boxShadow: '0px 22px 60px rgba(0,0,0,0.9)'
-            }}
-            transition={{ type: 'spring', stiffness: 170, damping: 18 }}
-          >
-            <div className="card-label">02</div>
-            <h3 className="card-title">Full website</h3>
+          <article className="card">
+            <div className="card-label">Systems</div>
+            <h3 className="card-title">Full-stack web applications</h3>
             <p className="card-body">
-              A structured multi-page site for studios, products or service companies.
+              Dashboards, portals and internal tools built as long-term infrastructure for your
+              team and customers.
             </p>
-          </motion.article>
+          </article>
 
-          <motion.article
-            className="card"
-            whileHover={{
-              rotateX: 4,
-              translateY: -6,
-              boxShadow: '0px 22px 60px rgba(0,0,0,0.9)'
-            }}
-            transition={{ type: 'spring', stiffness: 170, damping: 18 }}
-          >
-            <div className="card-label">03</div>
-            <h3 className="card-title">Iterative refinement</h3>
+          <article className="card">
+            <div className="card-label">Brand & Visuals</div>
+            <h3 className="card-title">Brand & graphic design support</h3>
             <p className="card-body">
-              Light ongoing improvements to keep your site aligned with what you learn over time.
+              Visual systems, layouts and assets that help your brand feel consistent across web,
+              decks and campaigns.
             </p>
-          </motion.article>
+          </article>
         </div>
       </SectionReveal>
     </main>

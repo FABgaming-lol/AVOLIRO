@@ -9,8 +9,8 @@ export default function About() {
           <div>
             <h1 className="section-title">Studio</h1>
             <p className="section-desc">
-              Avoliro is a small, focused web studio. The aim is to build company sites
-              that feel confident, fast and clear.
+              Avoliro is a small, focused studio working where design, technology and business
+              overlap.
             </p>
           </div>
         </div>
@@ -19,26 +19,23 @@ export default function About() {
           <article className="card">
             <div className="card-label">Approach</div>
             <p className="card-body">
-              The focus is on essentials: clear positioning, a calm visual environment and a
-              straightforward way for people to understand whether your company is the right
-              fit for them.
+              The work aims for calm, readable interfaces and clear messaging. The goal is to help
+              visitors understand what you do quickly, rather than impress them with complexity.
             </p>
             <p className="card-body">
-              Animation and effects are used to support the story, not distract from it.
-              Everything is built to be maintainable and performance-conscious.
+              Animation and detail are used as supporting elements, not the main event.
             </p>
           </article>
 
           <article className="card">
-            <div className="card-label">What this is for</div>
+            <div className="card-label">Fit</div>
             <p className="card-body">
-              Avoliro is well-suited for product teams, small companies and studios that
-              need a site that will still feel relevant and usable a few years from now,
-              not just at launch.
+              Avoliro is best suited to small and growing companies, teams with long-term products,
+              and people who prefer substance over trends.
             </p>
             <p className="card-body">
-              The goal is to become a quiet, reliable part of your company&apos;s brand
-              infrastructure rather than a one-off visual experiment.
+              The aim is to become a quiet part of your brand and product infrastructure, not a
+              one-off launch moment.
             </p>
           </article>
         </div>

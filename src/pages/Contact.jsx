@@ -16,8 +16,7 @@ export default function Contact() {
           <div>
             <h1 className="section-title">Start a project</h1>
             <p className="section-desc">
-              A short message is enough to start the conversation. More detail can follow
-              once we know the basics.
+              A short message is enough to begin. More detail can follow once we know the basics.
             </p>
           </div>
         </div>
@@ -51,8 +50,8 @@ export default function Contact() {
 
               {sent && (
                 <p className="card-body" style={{ marginTop: '10px' }}>
-                  This demo form doesn&apos;t send yet. In a live setup it can be connected
-                  to an email provider or form handler.
+                  This demo form doesn&apos;t send yet. In a live setup it can be connected to
+                  email or a form service.
                 </p>
               )}
             </form>
@@ -62,12 +61,12 @@ export default function Contact() {
             <div className="card-label">What to include</div>
             <p className="card-body">
               A short description of your company, a rough idea of scope (for example:
-              &quot;new marketing site&quot; or &quot;update our existing site&quot;), and
-              any timing constraints.
+              &quot;new marketing site&quot; or &quot;update our existing site&quot;), and any
+              timing constraints.
             </p>
             <p className="card-body">
-              Typical responses are within 2–3 working days. If the project is not the right
-              fit, you will still get a clear answer so you can move forward quickly.
+              Typical responses are within 2–3 working days. If the project is not the right fit,
+              you will still get a clear answer so you can move forward quickly.
             </p>
           </article>
         </div>
