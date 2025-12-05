@@ -51,13 +51,6 @@ export default function Lightning({
         return c.z * mix(vec3(1.0), rgb, c.y);
       }
 
-      float hash11(float p) {
-        p = fract(p * .1031);
-        p *= p + 33.33;
-        p *= p + p;
-        return fract(p);
-      }
-
       float hash12(vec2 p) {
         vec3 p3 = fract(vec3(p.xyx) * .1031);
         p3 += dot(p3, p3.yzx + 33.33);
@@ -103,8 +96,8 @@ export default function Lightning({
 
         float dist = abs(uv.x);
         vec3 baseColor = hsv2rgb(vec3(uHue / 360.0, 0.7, 0.8));
-        vec3 col = baseColor * pow(mix(0.0, 0.07, hash11(iTime * uSpeed)) / dist, 1.0) * uIntensity;
-        col = pow(col, vec3(1.0));
+        vec3 col = baseColor * (0.06 / dist) * uIntensity;
+        col = clamp(col, 0.0, 1.0);
         fragColor = vec4(col, 1.0);
       }
 

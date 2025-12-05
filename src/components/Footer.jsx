@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer-brand">
           <strong style={{ letterSpacing: '0.12em' }}>AVOLIRO</strong>
           <p className="footer-tagline">
-            "Elevate Everything!"
+            Design, technology &amp; strategy for growing companies.
           </p>
           <span className="footer-meta">© {year} Avoliro Studio</span>
         </div>
