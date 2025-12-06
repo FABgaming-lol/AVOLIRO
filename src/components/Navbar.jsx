@@ -16,9 +16,8 @@ export default function Navbar() {
     <header className={`nav-shell ${solid ? "nav-solid" : ""}`}>
       <div className="nav-inner">
         <Link to="/" className="brand-mark" onClick={() => setIsOpen(false)}>
-          <img src={logo} alt="Avoliro" className="nav-logo-img" />
-          <span className="brand-name">Avoliro</span>
-        </Link>
+  <img src={logo} alt="Avoliro" className="nav-logo-img" />
+</Link>
 
         <nav className="nav-links-desktop">
           <NavLink to="/" className="nav-link">Home</NavLink>
