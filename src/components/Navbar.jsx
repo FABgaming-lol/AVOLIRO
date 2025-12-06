@@ -1,30 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo.png"; // Ensure this file exists
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
+  const [solid, setSolid] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [isSolid, setIsSolid] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsSolid(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setSolid(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <header className={`nav-shell ${isSolid ? "nav-solid" : ""}`}>
+    <header className={`nav-shell ${solid ? "nav-solid" : ""}`}>
       <div className="nav-inner">
-
-        {/* Logo */}
         <Link to="/" className="brand-mark" onClick={() => setIsOpen(false)}>
-          <img src={logo} alt="Avoliro Logo" className="brand-logo-img" />
+          <img src={logo} alt="Avoliro logo" className="brand-logo-img" />
           <span className="brand-name">Avoliro</span>
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="nav-links-desktop">
           <NavLink to="/" className="nav-link">Home</NavLink>
           <NavLink to="/work" className="nav-link">Work</NavLink>
@@ -33,13 +28,16 @@ export default function Navbar() {
           <NavLink to="/contact" className="nav-link">Contact</NavLink>
         </nav>
 
-        {/* Mobile Menu Toggle */}
-        <button className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="nav-toggle"
+          type="button"
+          onClick={() => setIsOpen((v) => !v)}
+          aria-label="Toggle navigation"
+        >
           ☰
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="nav-mobile-menu">
           <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>

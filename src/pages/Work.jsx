@@ -1,76 +1,72 @@
-import React from 'react'
-import SectionReveal from '../components/SectionReveal.jsx'
-
-const projects = [
-  {
-    label: 'Full-stack · Sub-brand',
-    name: 'Velano',
-    role: 'Full-stack web development & technical implementation.',
-    outcome:
-      'Engineering-focused web presence for Avoliro’s custom development offering.',
-    link: 'https://velano-portfolio.vercel.app/'
-  },
-  {
-    label: 'Brand + Web',
-    name: 'Product Studio',
-    role: 'Positioning, landing structure & visual tone.',
-    outcome:
-      'Supported the studio with a confident presentation of services for early outreach.',
-    link: null
-  },
-  {
-    label: 'Internal Systems',
-    name: 'Operations Dashboard',
-    role: 'Interface design + front-end build for team-level visibility.',
-    outcome:
-      'Improved clarity and reduced friction in daily workflows through usability-first dashboards.',
-    link: null
-  },
-  {
-    label: 'Marketing Presence',
-    name: 'Service Business Site',
-    role: 'Website structure & messaging refinement.',
-    outcome:
-      'Aligned storytelling and navigation to help customers understand how to begin working together.',
-    link: null
-  }
-]
+import React from "react";
 
 export default function Work() {
   return (
-    <main className="page-shell">
-      <SectionReveal className="section-block">
-        <div className="section-header">
-          <div>
-            <h1 className="section-title">Selected Work</h1>
-            <p className="section-desc">
-              A small sample of web systems, digital presence and brand-aligned interfaces
-              for growing companies. More detailed case studies available on request.
-            </p>
-          </div>
-        </div>
+    <div className="page-shell">
+      <header className="section-header">
+        <h2 className="section-title">Selected Work</h2>
+        <p className="section-desc">
+          Real results — powered by our specialized teams under Velano & InkForge.
+        </p>
+      </header>
 
-        <div className="project-grid">
-          {projects.map((p) => (
-            <article className="project-card" key={p.name}>
-              <div className="project-chip">{p.label}</div>
-              <h3 className="project-title">{p.name}</h3>
-              <p className="project-role">{p.role}</p>
-              <p className="project-outcome">{p.outcome}</p>
-              {p.link && (
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link"
-                >
-                  View project <span>↗</span>
-                </a>
-              )}
-            </article>
-          ))}
-        </div>
-      </SectionReveal>
-    </main>
-  )
+      {/* Velano Section */}
+      <h3 className="section-category">Velano — Web & Digital Systems</h3>
+      <div className="grid grid-3">
+        <a className="work-card" href="#" target="_blank" rel="noopener noreferrer">
+          <div className="work-thumb placeholder"></div>
+          <div className="work-info">
+            <h4>Portal System UI</h4>
+            <p>Secure dashboard & operations platform.</p>
+          </div>
+        </a>
+
+        <a className="work-card" href="#" target="_blank" rel="noopener noreferrer">
+          <div className="work-thumb placeholder"></div>
+          <div className="work-info">
+            <h4>Product Landing</h4>
+            <p>Fast, conversion-focused product site.</p>
+          </div>
+        </a>
+
+        <a className="work-card" href="#" target="_blank" rel="noopener noreferrer">
+          <div className="work-thumb placeholder"></div>
+          <div className="work-info">
+            <h4>B2B Website</h4>
+            <p>Professional brand-first online presence.</p>
+          </div>
+        </a>
+      </div>
+
+      {/* InkForge Section */}
+      <h3 className="section-category" style={{ marginTop: "42px" }}>
+        InkForge — Branding & Creative
+      </h3>
+      <div className="grid grid-3">
+        <a className="work-card" href="#" target="_blank" rel="noopener noreferrer">
+          <div className="work-thumb placeholder"></div>
+          <div className="work-info">
+            <h4>Brand Refresh</h4>
+            <p>Modern identity for a growing company.</p>
+          </div>
+        </a>
+
+        <a className="work-card" href="#" target="_blank" rel="noopener noreferrer">
+          <div className="work-thumb placeholder"></div>
+          <div className="work-info">
+            <h4>Campaign Visuals</h4>
+            <p>Creative assets for digital campaigns.</p>
+          </div>
+        </a>
+
+        <a className="work-card" href="#" target="_blank" rel="noopener noreferrer">
+          <div className="work-thumb placeholder"></div>
+          <div className="work-info">
+            <h4>Logo Systems</h4>
+            <p>Scalable logo & brand mark systems.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  );
 }

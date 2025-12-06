@@ -4,9 +4,9 @@ export default function Contact() {
   return (
     <div className="page-shell">
       <header className="section-header">
-        <h2 className="section-title">Contact</h2>
+        <h2 className="section-title">Start a Project</h2>
         <p className="section-desc">
-          Ready to elevate everything? Tell us what your business needs next.
+          Ready to elevate everything? Let’s build what your business needs next.
         </p>
       </header>
 
@@ -17,35 +17,30 @@ export default function Contact() {
           alert("Thank you! We will get back to you shortly.");
         }}
       >
-        {/* Name */}
         <div className="field">
           <label>Your Name</label>
-          <input required type="text" placeholder="Enter your full name" />
+          <input required type="text" placeholder="Enter full name" />
         </div>
 
-        {/* Email */}
         <div className="field">
           <label>Email</label>
-          <input required type="email" placeholder="example@company.com" />
+          <input required type="email" placeholder="name@company.com" />
         </div>
 
-        {/* Service Type */}
         <div className="field">
-          <label>Service Type</label>
+          <label>Brand / Service</label>
           <select required>
-            <option value="">Select one</option>
-            <option value="velano_web">Velano — Web Systems</option>
-            <option value="velano_sites">Velano — Websites</option>
-            <option value="inkforge_branding">InkForge — Branding</option>
-            <option value="inkforge_rebrand">InkForge — Re-Branding</option>
-            <option value="inkforge_graphic">InkForge — Graphic Design</option>
+            <option value="">Select</option>
+            <option value="velano">Velano — Web & Digital Systems</option>
+            <option value="inkforge-brand">InkForge — Branding</option>
+            <option value="inkforge-rebrand">InkForge — Rebranding</option>
+            <option value="inkforge-graphic">InkForge — Graphic Design</option>
           </select>
         </div>
 
-        {/* Message */}
         <div className="field">
-          <label>Project Details</label>
-          <textarea rows="5" placeholder="Tell us about your project..." />
+          <label>Message</label>
+          <textarea rows="5" placeholder="Tell us about your project..."></textarea>
         </div>
 
         <button type="submit" className="btn-primary">

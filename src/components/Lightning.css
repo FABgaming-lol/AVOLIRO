@@ -1,6 +1,31 @@
-.lightning-container {
+.lightning-canvas {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: block;
-  will-change: transform;
+  pointer-events: none; /* prevent accidental taps */
+  z-index: -1; /* push behind hero content */
+}
+
+/* Parent container should allow lightning to sit behind */
+.hero-lightning-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* Ensures visibility on small devices */
+@media (max-width: 768px) {
+  .lightning-canvas {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+/* Performance safeguard */
+@media (max-width: 480px) {
+  .lightning-canvas {
+    opacity: 0.9;
+  }
 }

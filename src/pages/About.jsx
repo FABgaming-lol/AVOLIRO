@@ -1,44 +1,40 @@
-import React from 'react'
-import SectionReveal from '../components/SectionReveal.jsx'
+import React from "react";
 
 export default function About() {
   return (
-    <main className="page-shell">
-      <SectionReveal className="section-block">
-        <div className="section-header">
-          <div>
-            <h1 className="section-title">Studio</h1>
-            <p className="section-desc">
-  Avoliro helps organizations elevate everything — clarity, performance and presence.
-</p>
-          </div>
-        </div>
+    <div className="page-shell">
+      <header className="section-header">
+        <h2 className="section-title">About Avoliro</h2>
+        <p className="section-desc">
+          We elevate everything — your presence, performance & potential.
+        </p>
+      </header>
 
-        <div className="grid grid-2">
-          <article className="card">
-            <div className="card-label">Approach</div>
-            <p className="card-body">
-              The work aims for calm, readable interfaces and clear messaging. The goal is to help
-              visitors understand what you do quickly, rather than impress them with complexity.
-            </p>
-            <p className="card-body">
-              Animation and detail are used as supporting elements, not the main event.
-            </p>
-          </article>
+      <p className="section-body" style={{ maxWidth: "700px" }}>
+        Avoliro is a business-focused design and technology company. We combine
+        strategic thinking with practical execution to help organizations stand out
+        and scale. We build strong brands and digital systems that move businesses forward.
+      </p>
 
-          <article className="card">
-            <div className="card-label">Fit</div>
-            <p className="card-body">
-              Avoliro is best suited to small and growing companies, teams with long-term products,
-              and people who prefer substance over trends.
-            </p>
-            <p className="card-body">
-              The aim is to become a quiet part of your brand and product infrastructure, not a
-              one-off launch moment.
-            </p>
-          </article>
-        </div>
-      </SectionReveal>
-    </main>
-  )
+      <h3 className="section-category" style={{ marginTop: "42px" }}>
+        Sub-Brands & Capabilities
+      </h3>
+
+      <ul className="about-list">
+        <li>
+          <strong>Velano</strong> — Web & Digital Systems<br />
+          High-performance websites, dashboards, automation and scalable digital products.
+        </li>
+        <li>
+          <strong>InkForge</strong> — Branding & Creative<br />
+          Identity design, re-branding, marketing visuals & communication systems.
+        </li>
+      </ul>
+
+      <p className="section-body" style={{ marginTop: "30px", maxWidth: "700px" }}>
+        Through Velano and InkForge, we deliver a complete growth system: presence, operations,
+        marketing, and brand trust — everything under one direction.
+      </p>
+    </div>
+  );
 }
