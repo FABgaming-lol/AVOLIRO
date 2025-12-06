@@ -1032,3 +1032,25 @@ main, .page-shell, .section-block, .section-header {
 .work-link:hover {
   opacity: 1;
 }
+
+/* ========================= */
+/* GOOGLE FORM RESPONSIVE FIX */
+/* ========================= */
+
+@media (min-width: 900px) {
+  iframe {
+    height: 1100px; /* Desktop */
+  }
+}
+
+@media (max-width: 899px) {
+  iframe {
+    height: 1600px; /* Tablet + Mobile */
+  }
+}
+
+@media (max-width: 500px) {
+  iframe {
+    height: 1900px; /* Small phones */
+  }
+}

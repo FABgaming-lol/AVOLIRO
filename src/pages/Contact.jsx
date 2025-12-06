@@ -41,67 +41,35 @@ export default function Contact() {
       </motion.header>
 
       {/* Contact Form */}
-      <motion.form
-        className="contact-form"
-        style={{
-          maxWidth: "760px",
-          width: "100%",
-          marginTop: "40px",
-          padding: "32px",
-          borderRadius: "20px",
-          background: "rgba(255,255,255,0.04)",
-          border: "1px solid rgba(255,255,255,0.07)",
-        }}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.55, staggerChildren: 0.12 }}
-        variants={fadeUp}
-        onSubmit={handleSubmit}
-      >
-        {/* Field Groups */}
-        <motion.div className="field" variants={fadeUp}>
-          <label>Your Name</label>
-          <input required type="text" name="name" placeholder="Enter full name" />
-        </motion.div>
-
-        <motion.div className="field" variants={fadeUp}>
-          <label>Email</label>
-          <input required type="email" name="email" placeholder="name@company.com" />
-        </motion.div>
-
-        <motion.div className="field" variants={fadeUp}>
-          <label>Brand / Service</label>
-          <select required name="service">
-            <option value="">Select</option>
-            <option value="Velano — Web & Digital Systems">Velano — Web & Digital Systems</option>
-            <option value="InkForge — Branding">InkForge — Branding</option>
-            <option value="InkForge — Rebranding">InkForge — Rebranding</option>
-            <option value="InkForge — Graphic Design">InkForge — Graphic Design</option>
-          </select>
-        </motion.div>
-
-        <motion.div className="field" variants={fadeUp}>
-          <label>Message</label>
-          <textarea rows="5" name="message" placeholder="Tell us about your project..."></textarea>
-        </motion.div>
-
-        <motion.button
-          type="submit"
-          className="btn-primary"
-          variants={fadeUp}
-          style={{
-            marginTop: "18px",
-            width: "100%",
-            padding: "14px",
-            fontSize: "17px",
-            borderRadius: "10px",
-            fontWeight: "600",
-          }}
-        >
-          Submit Request
-        </motion.button>
-      </motion.form>
+      {/* Contact Form Embed */}
+<motion.div
+  style={{
+    maxWidth: "760px",
+    width: "100%",
+    marginTop: "40px"
+  }}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  transition={{ duration: 0.55 }}
+  variants={fadeUp}
+>
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSeopkotDo3TdC8DFrNXUgRXk3rr6X6hpkbqtH1VG9ZqykY2qQ/viewform?embedded=true"
+    width="100%"
+    height="1400"
+    frameBorder="0"
+    marginHeight="0"
+    marginWidth="0"
+    style={{
+      border: "none",
+      background: "transparent",
+      borderRadius: "18px",
+    }}
+  >
+    Loading…
+  </iframe>
+</motion.div>
     </div>
   );
 }
