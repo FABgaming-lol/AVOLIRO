@@ -13,9 +13,9 @@ export default function Home() {
     <div className="page-shell">
       <section className="hero-block">
         <div className="hero-lightning-layer">
-          <Lightning hue={220} xOffset={0} speed={1} intensity={1} size={1} />
-        </div>
-
+  <Lightning hue={220} xOffset={0} speed={1} intensity={1} size={1} />
+  <div className="hero-overlay"></div>
+</div>
         <motion.div className="hero-content" initial="initial" animate="animate">
           <motion.div {...fadeUp} transition={{ delay: 0.1 }}>
             <div className="hero-eyebrow">Future-ready Businesses</div>
