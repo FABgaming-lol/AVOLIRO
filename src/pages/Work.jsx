@@ -1,72 +1,70 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Work() {
+  const fadeUp = {
+    initial: { opacity: 0, y: 25 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.55, ease: "easeOut" },
+  };
+
   return (
-    <div className="page-shell">
-      <header className="section-header">
-        <h2 className="section-title">Selected Work</h2>
-        <p className="section-desc">
-          Real results — powered by our specialized teams under Velano & InkForge.
+    <motion.div
+      className="page-shell work-page"
+      initial="initial"
+      animate="animate"
+    >
+      {/* Header */}
+      <motion.section className="work-hero" {...fadeUp}>
+        <h1 className="work-title">Selected Work</h1>
+        <p className="work-sub">
+          A curated selection of digital and branding projects executed under our
+          sub-brands — delivering clarity, reliability and results.
         </p>
-      </header>
+      </motion.section>
 
-      {/* Velano Section */}
-      <h3 className="section-category">Velano — Web & Digital Systems</h3>
-      <div className="grid grid-3">
-        <a className="work-card" href="#" target="_blank" rel="noopener noreferrer">
-          <div className="work-thumb placeholder"></div>
-          <div className="work-info">
-            <h4>Portal System UI</h4>
-            <p>Secure dashboard & operations platform.</p>
-          </div>
-        </a>
+      {/* Work Sections */}
+      <motion.section className="work-section" {...fadeUp} transition={{ delay: 0.15 }}>
+        <h3 className="work-cat">Velano — Web & Digital Systems</h3>
 
-        <a className="work-card" href="#" target="_blank" rel="noopener noreferrer">
-          <div className="work-thumb placeholder"></div>
-          <div className="work-info">
-            <h4>Product Landing</h4>
-            <p>Fast, conversion-focused product site.</p>
+        <div className="work-list">
+          <div className="work-item">
+            <h4 className="work-name">High-Performance Web Systems</h4>
+            <p className="work-body">
+              Websites, dashboards and automation tools supporting business operations at scale.
+            </p>
+            <a
+              href="https://velano-portfolio.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="work-link"
+            >
+              Explore Velano ↗
+            </a>
           </div>
-        </a>
+        </div>
+      </motion.section>
 
-        <a className="work-card" href="#" target="_blank" rel="noopener noreferrer">
-          <div className="work-thumb placeholder"></div>
-          <div className="work-info">
-            <h4>B2B Website</h4>
-            <p>Professional brand-first online presence.</p>
-          </div>
-        </a>
-      </div>
+      <motion.section className="work-section" {...fadeUp} transition={{ delay: 0.25 }}>
+        <h3 className="work-cat">InkForge — Branding & Creative</h3>
 
-      {/* InkForge Section */}
-      <h3 className="section-category" style={{ marginTop: "42px" }}>
-        InkForge — Branding & Creative
-      </h3>
-      <div className="grid grid-3">
-        <a className="work-card" href="#" target="_blank" rel="noopener noreferrer">
-          <div className="work-thumb placeholder"></div>
-          <div className="work-info">
-            <h4>Brand Refresh</h4>
-            <p>Modern identity for a growing company.</p>
+        <div className="work-list">
+          <div className="work-item">
+            <h4 className="work-name">Brand Identity Systems</h4>
+            <p className="work-body">
+              Visual design that builds recognition, trust and storytelling throughout your business.
+            </p>
+            <a
+              href="https://inkforge-by-avoliro.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="work-link"
+            >
+              Explore InkForge ↗
+            </a>
           </div>
-        </a>
-
-        <a className="work-card" href="#" target="_blank" rel="noopener noreferrer">
-          <div className="work-thumb placeholder"></div>
-          <div className="work-info">
-            <h4>Campaign Visuals</h4>
-            <p>Creative assets for digital campaigns.</p>
-          </div>
-        </a>
-
-        <a className="work-card" href="#" target="_blank" rel="noopener noreferrer">
-          <div className="work-thumb placeholder"></div>
-          <div className="work-info">
-            <h4>Logo Systems</h4>
-            <p>Scalable logo & brand mark systems.</p>
-          </div>
-        </a>
-      </div>
-    </div>
+        </div>
+      </motion.section>
+    </motion.div>
   );
 }
