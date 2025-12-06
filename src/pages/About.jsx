@@ -9,9 +9,8 @@ export default function About() {
           <div>
             <h1 className="section-title">Studio</h1>
             <p className="section-desc">
-              Avoliro is a small, focused studio working where design, technology and business
-              overlap.
-            </p>
+  Avoliro helps organizations elevate everything — clarity, performance and presence.
+</p>
           </div>
         </div>
 

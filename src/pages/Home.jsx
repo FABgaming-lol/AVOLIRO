@@ -1,94 +1,69 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
 import { motion } from 'framer-motion'
-import SectionReveal from '../components/SectionReveal.jsx'
-import Lightning from '../components/Lightning.jsx'
+import Lightning from '../components/Lightning'
 
 export default function Home() {
-  const [parallax, setParallax] = useState({ x: 0, y: 0 })
-
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect()
-    const x = (e.clientX - rect.left) / rect.width - 0.5
-    const y = (e.clientY - rect.top) / rect.height - 0.5
-    setParallax({
-      x: x * 18,
-      y: y * 12
-    })
+  const fadeUp = {
+    initial: { opacity: 0, y: 18 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, ease: 'easeOut' }
   }
 
   return (
-    <main className="page-shell">
-      <section className="hero-block" onMouseMove={handleMouseMove}>
-        <div
-          className="hero-lightning-layer"
-          style={{
-            transform: `translate3d(${parallax.x}px, ${parallax.y}px, 0) scale(1.06)`
-          }}
-        >
+    <div className="page-shell">
+
+      <section className="hero-block">
+        <div className="hero-lightning-layer">
           <Lightning hue={220} xOffset={0} speed={1} intensity={1} size={1} />
         </div>
 
-        <div className="hero-content">
-          <motion.div
-            className="hero-eyebrow"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-          >
-            Avoliro Studio
+        <motion.div 
+          className="hero-content"
+          initial="initial"
+          animate="animate"
+        >
+
+          <motion.div {...fadeUp} transition={{ delay: 0.1 }}>
+            <div className="hero-eyebrow">Future-ready Businesses</div>
           </motion.div>
 
-          <motion.h1
-            className="hero-title"
-            initial={{ opacity: 0, y: 60, rotateX: -18, scale: 0.96 }}
-            animate={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-          >
-            Bold, minimal web & brand experiences for real businesses.
+          <motion.h1 className="hero-title" {...fadeUp} transition={{ delay: 0.22 }}>
+            Avoliro
           </motion.h1>
 
-          <motion.p
-            className="hero-sub"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.12, ease: 'easeOut' }}
-          >
-            Design, technology & strategy for growing companies. Avoliro builds clean,
-            focused digital touchpoints that help your work make sense to the right people.
+          <motion.p className="hero-tagline" {...fadeUp} transition={{ delay: 0.40 }}>
+            Elevate Everything
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.2, ease: 'easeOut' }}
-          >
-            <Link to="/contact" className="btn-primary">
-              Start a project <span>↗</span>
-            </Link>{' '}
-            <Link to="/work" className="btn-ghost">
-              View selected work
-            </Link>
-          </motion.div>
-        </div>
+          <motion.p className="hero-sub" {...fadeUp} transition={{ delay: 0.52 }}>
+            We help companies strengthen how they look, work and communicate — through strategy,
+            brand and web systems.
+          </motion.p>
 
-        <div className="hero-scroll-indicator">
-          <span>Scroll</span>
-        </div>
+          <motion.div 
+            style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }} 
+            {...fadeUp} 
+            transition={{ delay: 0.65 }}
+          >
+            <a href="/services" className="btn-primary">Services</a>
+            <a href="/contact" className="btn-ghost">Start project</a>
+          </motion.div>
+
+        </motion.div>
       </section>
 
-      <SectionReveal className="section-block" id="services">
-        <div className="section-header">
-          <div>
-            <h2 className="section-title">Services</h2>
-            <p className="section-desc">
-              A focus on core brand and digital capabilities — from first positioning
-              to long-term product infrastructure.
-            </p>
-          </div>
-        </div>
+      {/* Services below remain same */}
+
+      <section className="section-block">
+        <header className="section-header">
+          <h2 className="section-title">SERVICES</h2>
+          <p className="section-desc">
+            From web systems to branding — we support companies with the essentials that drive growth.
+          </p>
+        </header>
 
         <div className="grid grid-3">
+          {/* Full Stack Web */}
           <a
             className="card card-link"
             href="https://velano-portfolio.vercel.app/"
@@ -96,78 +71,71 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <svg className="service-icon" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M3 3h8v8H3V3m10 0h8v8h-8V3M3 13h8v8H3v-8m10 0h8v8h-8v-8Z"
-              />
+              <path fill="currentColor" d="M3 3h8v8H3V3m10 0h8v8h-8V3M3 13h8v8H3v-8m10 0h8v8h-8v-8Z" />
             </svg>
-            <div className="card-label">01 · Web systems</div>
+            <div className="card-label">01 · Web Systems</div>
             <h3 className="card-title">Full-stack web development</h3>
             <p className="card-body">
-              Dashboards, portals and internal tools built as long-term product infrastructure.
+              Internal tools + online experiences that drive real business operations.
             </p>
-            <span className="project-link" style={{ marginTop: '8px', display: 'inline-flex' }}>
-              Visit Velano <span>↗</span>
-            </span>
+            <span className="project-link">Visit Velano ↗</span>
           </a>
 
+          {/* Company websites */}
           <article className="card">
             <svg className="service-icon" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M12 3a9 9 0 0 0 0 18 9 9 0 0 0 0-18m0 2a7 7 0 0 1 6.93 6H12V5m0 14a7 7 0 0 1-6.93-6H12v6Z"
-              />
+              <path fill="currentColor" d="M12 3a9 9 0 0 0 0 18 9 9 0 0 0 0-18m0 2a7 7 0 0 1 6.93 6H12V5m0 14a7 7 0 0 1-6.93-6H12v6Z" />
             </svg>
-            <div className="card-label">02 · Core presence</div>
+            <div className="card-label">02 · Web Presence</div>
             <h3 className="card-title">Company & product websites</h3>
             <p className="card-body">
-              Clear, modern websites designed to get the right people to act with confidence.
+              Clear, modern websites designed to convert the right audience with confidence.
             </p>
           </article>
 
+          {/* Branding */}
           <article className="card">
             <svg className="service-icon" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M14 2l8 8l-12 12H2v-8zm-2.5 4.91L7.91 10.5L6 8.59L11.59 3L13 4.41z"
-              />
+              <path fill="currentColor" d="M14 2l8 8l-12 12H2v-8zm-2.5 4.91L7.91 10.5L6 8.59L11.59 3L13 4.41z" />
             </svg>
             <div className="card-label">03 · Branding</div>
-            <h3 className="card-title">Brand systems for new companies</h3>
+            <h3 className="card-title">Brand identity for new companies</h3>
             <p className="card-body">
-              Identity fundamentals for teams defining themselves for the first time.
+              Strategy + identity foundations for teams defining themselves for the first time.
             </p>
           </article>
 
+          {/* Re-Branding */}
           <article className="card">
             <svg className="service-icon" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M12 4V1L8 5l4 4V6c3.3 0 6 2.7 6 6a6 6 0 0 1-11.9 1H4a8 8 0 0 0 15.9-1c0-4.4-3.6-8-8-8z"
-              />
+              <path fill="currentColor" d="M12 4V1L8 5l4 4V6c3.3 0 6 2.7 6 6a6 6 0 0 1-11.9 1H4a8 8 0 0 0 15.9-1c0-4.4-3.6-8-8-8z" />
             </svg>
-            <div className="card-label">04 · Re-branding</div>
-            <h3 className="card-title">Modernizing existing brands</h3>
+            <div className="card-label">04 · Re-Branding</div>
+            <h3 className="card-title">Modernizing established brands</h3>
             <p className="card-body">
-              Updating visuals & messaging to reflect current market positioning.
+              Updating identity & messaging to reflect current market positioning.
             </p>
           </article>
 
-          <article className="card">
+          {/* InkForge — Graphic Design */}
+          <a
+            className="card card-link"
+            href="https://inkforge-by-avoliro.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <svg className="service-icon" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M2 4h20v2H2V4m0 14h20v2H2v-2m0-7h20v2H2v-2Z"
-              />
+              <path fill="currentColor" d="M2 4h20v2H2V4m0 14h20v2H2v-2m0-7h20v2H2v-2Z" />
             </svg>
-            <div className="card-label">05 · Graphic support</div>
-            <h3 className="card-title">Graphic assets & visual support</h3>
+            <div className="card-label">05 · InkForge</div>
+            <h3 className="card-title">Graphic design & creative assets</h3>
             <p className="card-body">
-              Campaigns, social graphics and layouts that extend your brand.
+              Visual content that strengthens how your brand looks in everyday communication.
             </p>
-          </article>
+            <span className="project-link">Visit InkForge ↗</span>
+          </a>
         </div>
-      </SectionReveal>
-    </main>
+      </section>
+    </div>
   )
 }

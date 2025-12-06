@@ -16,8 +16,8 @@ export default function Contact() {
           <div>
             <h1 className="section-title">Start a project</h1>
             <p className="section-desc">
-              A short message is enough to begin. More detail can follow once we know the basics.
-            </p>
+  Ready to elevate everything? Let’s build what your business needs next.
+</p>
           </div>
         </div>
 
