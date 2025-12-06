@@ -429,16 +429,29 @@ RESPONSIVE BREAKPOINTS
   }
 }
 
-/* =============================
-   NAVIGATION — PREMIUM (OVERRIDES)
-============================= */
+/* ========================= */
+/* NAVBAR — CLEAN + NON-FIXED */
+/* ========================= */
+header {
+  width: 100%;
+  padding: 18px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* no overlay */
+  z-index: 10;
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
 
+/* Logo */
 .nav-logo-img {
   width: 135px;
   height: auto;
   object-fit: contain;
 }
 
+/* Desktop Nav */
 .nav-links {
   display: flex;
   gap: 38px;
@@ -460,6 +473,7 @@ RESPONSIVE BREAKPOINTS
   text-shadow: 0 0 12px rgba(255,255,255,0.6);
 }
 
+/* Mobile Toggle */
 .nav-mobile-toggle {
   display: none;
   width: 42px;
@@ -475,18 +489,18 @@ RESPONSIVE BREAKPOINTS
   background: rgba(255,255,255,0.12);
 }
 
+/* Mobile Menu */
 .nav-mobile-menu {
-  position: fixed;
-  top: 76px;
-  right: 16px;
+  display: none; /* hidden by default */
+  position: absolute;
+  right: 0;
+  top: 60px;
   background: rgba(20,20,20,0.95);
   border: 1px solid rgba(255,255,255,0.1);
   padding: 22px 26px;
   border-radius: 14px;
-  display: flex;
-  flex-direction: column;
   gap: 16px;
-  z-index: 200;
+  z-index: 99;
 }
 
 .nav-mobile-menu a {
@@ -496,44 +510,32 @@ RESPONSIVE BREAKPOINTS
   text-decoration: none;
 }
 
-/* Hide desktop links on mobile */
+/* ========================= */
+/* RESPONSIVE NAV FIXES */
+/* ========================= */
 @media (max-width: 830px) {
   .nav-links {
     display: none;
   }
-
   .nav-mobile-toggle {
+    display: flex;
+  }
+  .nav-mobile-menu {
     display: flex;
   }
 }
 
-/* Extra spacing for first visible sections under the navbar */
+/* ========================= */
+/* PAGE SPACING FIX */
+/* ========================= */
+.page-shell {
+  position: relative;
+  z-index: 1;
+  padding-top: 40px; /* just enough spacing */
+}
+
+/* Extra spacing for section headers */
 .section-header,
 .section-block:first-of-type {
   margin-top: 40px;
-}
-
-/* Fix navbar overlay issue */
-header {
-  width: 100%;
-  height: 76px; /* fixed height */
-  padding: 18px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  z-index: 999; /* above lightning, below content */
-  pointer-events: auto;
-}
-
-/* Ensure page content is fully visible below navbar */
-.page-shell {
-  position: relative;
-  z-index: 10;
-  padding-top: 140px; /* Perfect spacing for desktop + mobile */
 }
