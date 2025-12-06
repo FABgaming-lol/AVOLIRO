@@ -7,6 +7,23 @@ export default function Contact() {
     visible: { opacity: 1, y: 0 },
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const service = e.target.service.value;
+    const message = e.target.message.value;
+
+    const mailToLink = `mailto:AVOLIRO@proton.me?subject=Project Inquiry - ${encodeURIComponent(
+      service
+    )}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    )}`;
+
+    window.location.href = mailToLink;
+  };
+
   return (
     <div className="page-shell">
       {/* Header */}
@@ -40,36 +57,33 @@ export default function Contact() {
         viewport={{ once: true }}
         transition={{ duration: 0.55, staggerChildren: 0.12 }}
         variants={fadeUp}
-        onSubmit={(e) => {
-          e.preventDefault();
-          alert("Thank you! We will get back to you shortly.");
-        }}
+        onSubmit={handleSubmit}
       >
         {/* Field Groups */}
         <motion.div className="field" variants={fadeUp}>
           <label>Your Name</label>
-          <input required type="text" placeholder="Enter full name" />
+          <input required type="text" name="name" placeholder="Enter full name" />
         </motion.div>
 
         <motion.div className="field" variants={fadeUp}>
           <label>Email</label>
-          <input required type="email" placeholder="name@company.com" />
+          <input required type="email" name="email" placeholder="name@company.com" />
         </motion.div>
 
         <motion.div className="field" variants={fadeUp}>
           <label>Brand / Service</label>
-          <select required>
+          <select required name="service">
             <option value="">Select</option>
-            <option value="velano">Velano — Web & Digital Systems</option>
-            <option value="inkforge-brand">InkForge — Branding</option>
-            <option value="inkforge-rebrand">InkForge — Rebranding</option>
-            <option value="inkforge-graphic">InkForge — Graphic Design</option>
+            <option value="Velano — Web & Digital Systems">Velano — Web & Digital Systems</option>
+            <option value="InkForge — Branding">InkForge — Branding</option>
+            <option value="InkForge — Rebranding">InkForge — Rebranding</option>
+            <option value="InkForge — Graphic Design">InkForge — Graphic Design</option>
           </select>
         </motion.div>
 
         <motion.div className="field" variants={fadeUp}>
           <label>Message</label>
-          <textarea rows="5" placeholder="Tell us about your project..."></textarea>
+          <textarea rows="5" name="message" placeholder="Tell us about your project..."></textarea>
         </motion.div>
 
         <motion.button
