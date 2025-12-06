@@ -521,3 +521,14 @@ header {
     display: flex;
   }
 }
+
+/* Page wrapper safety offset for fixed navbar */
+.page-shell {
+  padding-top: 110px; /* Prevents navbar overlap */
+}
+
+/* Extra spacing for first visible sections under the navbar */
+.section-header,
+.section-block:first-of-type {
+  margin-top: 40px;
+}
