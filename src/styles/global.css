@@ -623,3 +623,88 @@ main, .page-shell, .section-block, .section-header {
   color: #fff;
   margin-bottom: 28px;
 }
+
+/* ========================= */
+/* PREMIUM SERVICE PAGE UI   */
+/* ========================= */
+
+.premium-page {
+  color: #ffffff;
+}
+
+.services-hero {
+  text-align: center;
+  margin: 30px auto 60px;
+}
+
+.services-main-title {
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.services-sub {
+  opacity: 0.75;
+  font-size: 18px;
+  max-width: 680px;
+  margin: 14px auto 0;
+}
+
+.services-section {
+  margin-top: 60px;
+}
+
+.services-cat {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 22px;
+  opacity: 0.9;
+}
+
+/* Glass Service Cards */
+.service-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 16px;
+  padding: 36px 28px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.35s ease;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 10px 38px rgba(0,0,0,0.35);
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.card-index {
+  font-size: 13px;
+  opacity: 0.5;
+  font-weight: 900;
+}
+
+.service-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 12px 0;
+}
+
+.service-body {
+  opacity: 0.75;
+  line-height: 1.45;
+  max-width: 90%;
+}
+
+.service-link {
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 22px;
+  right: 28px;
+}
