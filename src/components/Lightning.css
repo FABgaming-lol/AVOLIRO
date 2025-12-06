@@ -4,8 +4,10 @@
   width: 100%;
   height: 100%;
   display: block;
-  pointer-events: none; /* prevent accidental taps */
-  z-index: -1; /* push behind hero content */
+  pointer-events: none;
+  z-index: -1;
+  opacity: 1;
+  filter: brightness(1.25) contrast(1.2);
 }
 
 /* Parent container should allow lightning to sit behind */

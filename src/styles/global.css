@@ -39,15 +39,7 @@ LAYOUT HELPERS
 NAVBAR
 ============================================ */
 .nav-shell {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 14px 22px;
-  display: flex;
-  justify-content: center;
-  transition: background 0.3s ease;
-  z-index: 999;
-  backdrop-filter: blur(6px);
+  padding: 18px 32px;
 }
 
 .nav-solid {
@@ -69,10 +61,9 @@ NAVBAR
 }
 
 .brand-name {
-  font-size: 18px;
-  font-weight: 700;
-  opacity: 0.9;
-  margin-left: 8px;
+  font-size: 22px;
+  font-weight: 900;
+  opacity: 1;
 }
 
 .nav-links-desktop {
@@ -81,9 +72,9 @@ NAVBAR
 }
 
 .nav-link {
-  font-size: 15px;
-  opacity: 0.85;
-  transition: opacity 0.25s;
+  font-size: 16px;
+  font-weight: 700;
+  opacity: 1;
 }
 
 .nav-link:hover,
@@ -161,16 +152,17 @@ HERO SECTION
 }
 
 .hero-title {
-  font-size: clamp(46px, 8vw, 110px);
-  font-weight: 900;
-  line-height: 1.1;
-  margin: 12px 0;
+  font-size: clamp(60px, 9vw, 130px);
+  font-weight: 1000;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .hero-tagline {
-  font-size: clamp(18px, 3.5vw, 26px);
-  font-weight: 600;
-  opacity: 0.95;
+  font-size: clamp(22px, 3.8vw, 32px);
+  font-weight: 800;
+  opacity: 1;
 }
 
 .hero-sub {
@@ -218,9 +210,10 @@ SECTIONS — Headings
 }
 
 .section-title {
-  font-size: 40px;
+  font-size: 46px;
   font-weight: 900;
-  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
 .section-desc {
@@ -229,10 +222,9 @@ SECTIONS — Headings
 }
 
 .section-category {
-  font-size: 22px;
-  font-weight: 700;
-  opacity: 0.9;
-  margin: 40px 0 20px;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
 }
 
 /* ============================================
@@ -257,17 +249,16 @@ SERVICE + WORK CARDS
 ============================================ */
 .card,
 .work-card {
-  background: #0d0d0d;
-  border: 1px solid #161616;
-  padding: 28px;
-  border-radius: 14px;
-  transition: border 0.25s, transform 0.25s;
+  background: #0c0c0c;
+  border: 2px solid #222;
+  box-shadow: 0px 0px 28px rgba(23,105,255,0.08);
 }
 
 .card:hover,
 .work-card:hover {
   border-color: #1769ff;
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0px 0px 32px rgba(23,105,255,0.14);
 }
 
 .card-label,
@@ -277,10 +268,10 @@ SERVICE + WORK CARDS
   opacity: 0.95;
 }
 
+
 .card-title {
-  font-size: 24px;
-  font-weight: 800;
-  margin: 10px 0;
+  font-size: 26px;
+  font-weight: 900;
 }
 
 .card-body {
@@ -336,13 +327,10 @@ ABOUT PAGE
 FOOTER
 ============================================ */
 .footer-shell {
-  width: 100%;
-  background: #000;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 42px 20px;
-  text-align: center;
-  margin-top: 100px;
+  border-top: 2px solid rgba(255,255,255,0.15);
+  padding: 60px 20px;
 }
+
 
 .footer-links {
   display: flex;
@@ -353,8 +341,9 @@ FOOTER
 }
 
 .footer-tagline {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 900;
+  opacity: 1;
 }
 
 .footer-meta {
