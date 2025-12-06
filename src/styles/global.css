@@ -544,3 +544,71 @@ header {
 main, .page-shell, .section-block, .section-header {
   margin-top: 90px !important;
 }
+
+/* ========================= */
+/* PREMIUM SERVICE CARDS UI  */
+/* ========================= */
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 22px;
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: 0.35s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.card:hover {
+  background: rgba(255,255,255,0.10);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.card-label {
+  opacity: 0.6;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.card-body {
+  opacity: 0.8;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+.project-link {
+  position: absolute;
+  bottom: 22px;
+  right: 26px;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
+}
+
+.card:hover .project-link {
+  opacity: 1;
+}
+
+/* Grid responsiveness improvements */
+.grid.grid-2 {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media(max-width: 900px){
+  .grid.grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
