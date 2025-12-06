@@ -143,93 +143,103 @@ NAVBAR
 HERO SECTION
 ============================================ */
 .hero-block {
-  width: 100%;
-  height: 100vh;
-  min-height: 650px;
   position: relative;
+  width: 100%;
+  min-height: 90vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px 100px;
+  overflow: hidden;
 }
 
 .hero-lightning-layer {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.55),
-    rgba(0, 0, 0, 0.75)
-  );
-  z-index: -1;
+  background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.9) 100%);
+  z-index: 1;
 }
 
 .hero-content {
-  text-align: center;
   position: relative;
-  z-index: 2; /* ensures text stays above lightning & overlay */
-  text-shadow: 0px 2px 16px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  max-width: 900px;
+  color: #ffffff;
 }
 
 .hero-eyebrow {
   font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
   opacity: 0.75;
-  letter-spacing: 0.1em;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
 .hero-title {
-  font-size: clamp(60px, 9vw, 130px);
-  font-weight: 1000;
-  letter-spacing: -0.03em;
+  font-size: clamp(60px, 11vw, 160px);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 14px;
   text-transform: uppercase;
+  letter-spacing: -4px;
   color: #ffffff;
+  text-shadow: 0 0 40px #000000;
 }
 
 .hero-tagline {
-  font-size: clamp(22px, 3.8vw, 32px);
-  font-weight: 800;
-  opacity: 1;
+  font-size: clamp(20px, 3.6vw, 36px);
+  font-weight: 500;
+  margin-bottom: 16px;
+  opacity: 0.9;
 }
 
 .hero-sub {
-  max-width: 640px;
-  margin: 18px auto 32px;
+  font-size: clamp(16px, 2.2vw, 22px);
   opacity: 0.8;
+  margin-bottom: 32px;
 }
 
 /* ============================================
 BUTTONS
 ============================================ */
 .btn-primary {
-  padding: 14px 28px;
-  background: #1769ff;
-  color: #fff;
-  border-radius: 7px;
+  background: #ffffff;
+  color: #000000;
   font-weight: 700;
-  transition: transform 0.2s;
+  padding: 14px 36px;
+  font-size: 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
+  background: #dedede;
 }
 
 .btn-ghost {
-  padding: 14px 28px;
-  border-radius: 7px;
-  border: 2px solid rgba(255, 255, 255, 0.22);
-  font-weight: 700;
-  opacity: 0.85;
-  transition: opacity 0.2s, transform 0.2s;
+  background: rgba(255,255,255,0.12);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 14px 34px;
+  font-size: 18px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.3);
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .btn-ghost:hover {
-  opacity: 1;
-  transform: translateY(-3px);
+  background: rgba(255,255,255,0.22);
+  border-color: #ffffff;
 }
 
 /* ============================================
