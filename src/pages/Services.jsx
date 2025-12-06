@@ -1,5 +1,5 @@
 import React from "react";
-import Reveal from "src/components/Reveal";
+import Reveal from "src/components/Reveal.jsx";
 
 export default function Services() {
   return (
