@@ -1,56 +1,69 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Services() {
-  return (
-    <div className="page-shell premium-page">
+  const fadeUp = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.5, ease: "easeOut" }
+  };
 
-      <section className="services-hero">
+  return (
+    <motion.div
+      className="page-shell services-page"
+      initial="initial"
+      animate="animate"
+    >
+
+      <motion.section className="services-hero" {...fadeUp}>
         <h1 className="services-main-title">Our Services</h1>
         <p className="services-sub">
-          We create business-ready solutions with bold design and scalable technology.
+          Solutions designed to elevate your business operations,
+          presence and growth—backed by strategy.
         </p>
-      </section>
+      </motion.section>
 
-      <section className="services-section">
+      {/* Velano */}
+      <motion.section className="services-section" {...fadeUp} transition={{ delay: 0.2 }}>
         <h3 className="services-cat">Velano — Web & Digital Systems</h3>
 
-        <div className="grid grid-2">
+        <div className="services-list">
           <a
-            className="service-card"
             href="https://velano-portfolio.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
+            className="service-card"
           >
-            <span className="card-index">01</span>
             <h4 className="service-title">Web & Digital Systems</h4>
             <p className="service-body">
-              High-performance websites, dashboards and automation tools that scale with your business.
+              High-performance websites, dashboards, automation systems —
+              everything a modern business depends on.
             </p>
             <span className="service-link">Explore Velano ↗</span>
           </a>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="services-section">
+      {/* InkForge */}
+      <motion.section className="services-section" {...fadeUp} transition={{ delay: 0.35 }}>
         <h3 className="services-cat">InkForge — Branding & Creative</h3>
 
-        <div className="grid grid-2">
+        <div className="services-list">
           <a
-            className="service-card"
             href="https://inkforge-by-avoliro.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
+            className="service-card"
           >
-            <span className="card-index">02</span>
             <h4 className="service-title">Branding & Creative</h4>
             <p className="service-body">
-              Identity and re-branding that elevates brand recognition across every touchpoint.
+              Strategic branding and visual identity systems that elevate how your audience recognizes and trusts you.
             </p>
             <span className="service-link">Explore InkForge ↗</span>
           </a>
         </div>
-      </section>
+      </motion.section>
 
-    </div>
+    </motion.div>
   );
 }
