@@ -40,18 +40,13 @@ export default function Contact() {
         </p>
       </motion.header>
 
-      {/* Contact Form */}
       {/* Contact Form Embed */}
 <motion.div
-  style={{
-    maxWidth: "760px",
-    width: "100%",
-    marginTop: "40px"
-  }}
+  className="contact-embed-wrap"
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true }}
-  transition={{ duration: 0.55 }}
+  transition={{ duration: 0.7 }}
   variants={fadeUp}
 >
   <iframe
@@ -64,7 +59,6 @@ export default function Contact() {
     style={{
       border: "none",
       background: "transparent",
-      borderRadius: "18px",
     }}
   >
     Loading…
