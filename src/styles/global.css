@@ -539,3 +539,8 @@ header {
 .section-block:first-of-type {
   margin-top: 40px;
 }
+
+/* Universal spacing below navbar */
+main, .page-shell, .section-block, .section-header {
+  margin-top: 90px !important;
+}
