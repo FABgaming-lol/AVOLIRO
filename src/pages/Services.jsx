@@ -2,30 +2,31 @@ import React from "react";
 
 export default function Services() {
   return (
-    <div className="page-shell">
+    <div className="page-shell premium-page">
 
-      <header className="section-header">
-        <h2 className="section-title">Our Services</h2>
-        <p className="section-desc">
-          Unified strategy. Specialized execution. Elevate Everything.
+      <section className="services-hero">
+        <h1 className="services-main-title">Our Services</h1>
+        <p className="services-sub">
+          We create business-ready solutions with bold design and scalable technology.
         </p>
-      </header>
+      </section>
 
       <section className="services-section">
         <h3 className="services-cat">Velano — Web & Digital Systems</h3>
 
         <div className="grid grid-2">
           <a
-            className="card card-link"
+            className="service-card"
             href="https://velano-portfolio.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h4 className="card-title">Web & Digital Systems</h4>
-            <p className="card-body">
-              High-performance websites, dashboards, and operations portals — everything your business runs on.
+            <span className="card-index">01</span>
+            <h4 className="service-title">Web & Digital Systems</h4>
+            <p className="service-body">
+              High-performance websites, dashboards and automation tools that scale with your business.
             </p>
-            <span className="project-link">Explore Velano ↗</span>
+            <span className="service-link">Explore Velano ↗</span>
           </a>
         </div>
       </section>
@@ -35,16 +36,17 @@ export default function Services() {
 
         <div className="grid grid-2">
           <a
-            className="card card-link"
+            className="service-card"
             href="https://inkforge-by-avoliro.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h4 className="card-title">Branding & Creative</h4>
-            <p className="card-body">
-              Re-branding, identity, marketing visuals — consistent design across every touchpoint.
+            <span className="card-index">02</span>
+            <h4 className="service-title">Branding & Creative</h4>
+            <p className="service-body">
+              Identity and re-branding that elevates brand recognition across every touchpoint.
             </p>
-            <span className="project-link">Explore InkForge ↗</span>
+            <span className="service-link">Explore InkForge ↗</span>
           </a>
         </div>
       </section>
