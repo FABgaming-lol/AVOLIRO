@@ -1,5 +1,4 @@
 import React from "react";
-import Reveal from "../components/Reveal";
 
 export default function Work() {
   return (
