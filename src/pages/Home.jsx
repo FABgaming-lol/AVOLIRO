@@ -19,9 +19,24 @@ export default function Home() {
 
         <motion.div className="hero-content" initial="initial" animate="animate">
           {/* Eyebrow */}
-          <motion.div {...fadeUp} transition={{ delay: 0.1 }}>
-            <div className="hero-eyebrow">Future-ready Businesses</div>
-          </motion.div>
+          <motion.div
+  className="hero-eyebrow"
+  {...fadeUp}
+  transition={{ delay: 0.05 }}
+  style={{ fontSize: "20px", fontWeight: "700", opacity: 0.9 }}
+>
+  <motion.span
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{
+      duration: 1,
+      repeat: Infinity,
+      repeatType: "mirror",
+    }}
+  >
+    Future-ready Businesses ✦
+  </motion.span>
+</motion.div>
 
           {/* Logo Name */}
           <motion.h1 className="hero-title" {...fadeUp} transition={{ delay: 0.22 }}>
