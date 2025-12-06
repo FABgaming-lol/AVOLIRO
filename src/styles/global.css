@@ -612,3 +612,14 @@ main, .page-shell, .section-block, .section-header {
     grid-template-columns: 1fr;
   }
 }
+
+.services-section {
+  margin-top: 60px;
+}
+
+.services-cat {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 28px;
+}
