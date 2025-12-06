@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Lightning from "../components/Lightning";
+import Reveal from "../components/Reveal";
 
 export default function Home() {
   const fadeUp = {
