@@ -14,24 +14,27 @@ export default function Work() {
       initial="initial"
       animate="animate"
     >
-      {/* Header */}
       <motion.section className="work-hero" {...fadeUp}>
-        <h1 className="work-title">Selected Work</h1>
+        <h1 className="work-title">Our Work</h1>
         <p className="work-sub">
-          A curated selection of digital and branding projects executed under our
-          sub-brands — delivering clarity, reliability and results.
+          Selected design and digital execution delivered across our brands —
+          built for growth.
         </p>
       </motion.section>
 
-      {/* Work Sections */}
-      <motion.section className="work-section" {...fadeUp} transition={{ delay: 0.15 }}>
+      {/* Velano */}
+      <motion.section
+        className="work-section"
+        {...fadeUp}
+        transition={{ delay: 0.15 }}
+      >
         <h3 className="work-cat">Velano — Web & Digital Systems</h3>
 
         <div className="work-list">
-          <div className="work-item">
-            <h4 className="work-name">High-Performance Web Systems</h4>
+          <div className="work-card">
+            <h4 className="work-name">Business Dashboard UI</h4>
             <p className="work-body">
-              Websites, dashboards and automation tools supporting business operations at scale.
+              Custom dashboard for secure business operations and data handling.
             </p>
             <a
               href="https://velano-portfolio.vercel.app/"
@@ -45,14 +48,19 @@ export default function Work() {
         </div>
       </motion.section>
 
-      <motion.section className="work-section" {...fadeUp} transition={{ delay: 0.25 }}>
+      {/* InkForge */}
+      <motion.section
+        className="work-section"
+        {...fadeUp}
+        transition={{ delay: 0.3 }}
+      >
         <h3 className="work-cat">InkForge — Branding & Creative</h3>
 
         <div className="work-list">
-          <div className="work-item">
-            <h4 className="work-name">Brand Identity Systems</h4>
+          <div className="work-card">
+            <h4 className="work-name">Branding Systems</h4>
             <p className="work-body">
-              Visual design that builds recognition, trust and storytelling throughout your business.
+              A scalable visual identity system crafted for modern brands.
             </p>
             <a
               href="https://inkforge-by-avoliro.vercel.app/"
