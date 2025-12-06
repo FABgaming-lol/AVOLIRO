@@ -1,26 +1,42 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
-  const year = new Date().getFullYear()
-
   return (
     <footer className="footer-shell">
-      <div className="footer-inner">
-        <div className="footer-brand">
-          <strong style={{ letterSpacing: '0.12em' }}>AVOLIRO</strong>
-          <p className="footer-tagline">
-            Elevate Everything!
-          </p>
-          <span className="footer-meta">© {year} Avoliro Studio</span>
-        </div>
+      <div style={{
+        maxWidth: "1200px",
+        margin: "0 auto",
+        padding: "0 22px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "12px"
+      }}>
+        
+        {/* Tagline */}
+        <p style={{
+          opacity: 0.9,
+          fontWeight: 700,
+          textTransform: "uppercase",
+          letterSpacing: "0.22em"
+        }}>
+          Elevate Everything
+        </p>
+
+        {/* Navigation */}
         <div className="footer-links">
-          <Link to="/services">Services</Link>
+          <Link to="/">Home</Link>
           <Link to="/work">Work</Link>
-          <Link to="/about">Studio</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
         </div>
+
+        {/* Copyright */}
+        <p style={{ fontSize: "11px", color: "#8087a8" }}>
+          © {new Date().getFullYear()} Avoliro — All rights reserved.
+        </p>
       </div>
     </footer>
-  )
+  );
 }

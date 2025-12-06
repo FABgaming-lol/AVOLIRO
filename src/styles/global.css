@@ -94,8 +94,57 @@ a {
   border: none;
 }
 
+/* NAV LOGO FIX */
+.brand-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+/* ENSURE NAV OVER CONTENT */
+.nav-shell {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* MOBILE MENU FIX — FULL WIDTH + VISIBLE */
 .nav-mobile-menu {
-  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 18px 22px;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.96);
+  border-bottom: 1px solid rgba(41, 92, 255, 0.4);
+  z-index: 999;
+}
+
+/* HAMBURGER ICON STYLE */
+.nav-toggle {
+  color: var(--text);
+  font-size: 22px;
+  border: none;
+  background: none;
+  display: flex; /* override hidden */
+}
+
+/* MOBILE LINKS BOOST */
+.nav-mobile-menu a {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.20em;
+  padding: 8px 0;
+}
+
+/* BETTER TOUCH AREA */
+.nav-link,
+.nav-mobile-menu a {
+  padding: 6px 2px;
+  display: inline-block;
 }
 
 /* LAYOUT */
@@ -258,6 +307,23 @@ a {
 /* CONTACT */
 .field input,
 .field textarea {
+  background: #050505;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  padding: 8px 10px;
+}
+
+.field label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 4px;
+  display: block;
+  opacity: 0.85;
+}
+
+select {
   background: #050505;
   border: 1px solid var(--border);
   border-radius: 10px;

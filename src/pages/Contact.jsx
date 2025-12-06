@@ -1,76 +1,57 @@
-import React, { useState } from 'react'
-import SectionReveal from '../components/SectionReveal.jsx'
+import React from "react";
 
 export default function Contact() {
-  const [sent, setSent] = useState(false)
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setSent(true)
-  }
-
   return (
-    <main className="page-shell">
-      <SectionReveal className="section-block">
-        <div className="section-header">
-          <div>
-            <h1 className="section-title">Start a project</h1>
-            <p className="section-desc">
-  Ready to elevate everything? Let’s build what your business needs next.
-</p>
-          </div>
+    <div className="page-shell">
+      <header className="section-header">
+        <h2 className="section-title">Contact</h2>
+        <p className="section-desc">
+          Ready to elevate everything? Tell us what your business needs next.
+        </p>
+      </header>
+
+      <form
+        className="contact-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          alert("Thank you! We will get back to you shortly.");
+        }}
+      >
+        {/* Name */}
+        <div className="field">
+          <label>Your Name</label>
+          <input required type="text" placeholder="Enter your full name" />
         </div>
 
-        <div className="grid grid-2">
-          <article className="card">
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <label className="field">
-                <span>Company or project name</span>
-                <input type="text" name="company" required />
-              </label>
-
-              <label className="field">
-                <span>What do you need help with?</span>
-                <textarea name="details" rows="3" required />
-              </label>
-
-              <label className="field">
-                <span>Current website / links (optional)</span>
-                <textarea name="links" rows="2" />
-              </label>
-
-              <label className="field">
-                <span>Contact email</span>
-                <input type="email" name="email" required />
-              </label>
-
-              <button type="submit" className="btn-primary">
-                Send message <span>↗</span>
-              </button>
-
-              {sent && (
-                <p className="card-body" style={{ marginTop: '10px' }}>
-                  This demo form doesn&apos;t send yet. In a live setup it can be connected to
-                  email or a form service.
-                </p>
-              )}
-            </form>
-          </article>
-
-          <article className="card">
-            <div className="card-label">What to include</div>
-            <p className="card-body">
-              A short description of your company, a rough idea of scope (for example:
-              &quot;new marketing site&quot; or &quot;update our existing site&quot;), and any
-              timing constraints.
-            </p>
-            <p className="card-body">
-              Typical responses are within 2–3 working days. If the project is not the right fit,
-              you will still get a clear answer so you can move forward quickly.
-            </p>
-          </article>
+        {/* Email */}
+        <div className="field">
+          <label>Email</label>
+          <input required type="email" placeholder="example@company.com" />
         </div>
-      </SectionReveal>
-    </main>
-  )
+
+        {/* Service Type */}
+        <div className="field">
+          <label>Service Type</label>
+          <select required>
+            <option value="">Select one</option>
+            <option value="velano_web">Velano — Web Systems</option>
+            <option value="velano_sites">Velano — Websites</option>
+            <option value="inkforge_branding">InkForge — Branding</option>
+            <option value="inkforge_rebrand">InkForge — Re-Branding</option>
+            <option value="inkforge_graphic">InkForge — Graphic Design</option>
+          </select>
+        </div>
+
+        {/* Message */}
+        <div className="field">
+          <label>Project Details</label>
+          <textarea rows="5" placeholder="Tell us about your project..." />
+        </div>
+
+        <button type="submit" className="btn-primary">
+          Submit Request
+        </button>
+      </form>
+    </div>
+  );
 }
