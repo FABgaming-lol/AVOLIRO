@@ -13,44 +13,45 @@ export default function Home() {
     <div className="page-shell">
       <section className="hero-block">
         <div className="hero-lightning-layer">
-          <Lightning hue={220} xOffset={0} speed={1} intensity={1} size={1} />
+          <Lightning hue={220} xOffset={0} speed={0.8} intensity={0.5} size={0.85} />
           <div className="hero-overlay"></div>
         </div>
 
         <motion.div className="hero-content" initial="initial" animate="animate">
           {/* Eyebrow */}
-          <motion.div
-  className="hero-eyebrow"
-  {...fadeUp}
-  transition={{ delay: 0.05 }}
-  style={{ fontSize: "20px", fontWeight: "700", opacity: 0.9 }}
->
-  <motion.span
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{
-      duration: 1,
-      repeat: Infinity,
-      repeatType: "mirror",
-    }}
-  >
-    Future-ready Businesses ✦
-  </motion.span>
-</motion.div>
+          <motion.div {...fadeUp} transition={{ delay: 0.1 }}>
+            <div className="hero-eyebrow" style={{ fontSize: "20px", fontWeight: 700 }}>
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                }}
+              >
+                Future-ready Businesses ✦
+              </motion.span>
+            </div>
+          </motion.div>
 
-          {/* Logo Name */}
-          <motion.h1 className="hero-title" {...fadeUp} transition={{ delay: 0.22 }}>
+          {/* AVOLIRO */}
+          <motion.h1
+            className="hero-title"
+            {...fadeUp}
+            transition={{ delay: 0.22 }}
+          >
             Avoliro
           </motion.h1>
 
-          {/* By Yuvi */}
+          {/* by Yuvi */}
           <motion.div
             {...fadeUp}
             transition={{ delay: 0.32 }}
             style={{
               fontSize: "20px",
-              fontWeight: "600",
-              opacity: 0.8,
+              fontWeight: 600,
+              opacity: 0.85,
               marginTop: "-6px",
               letterSpacing: "1px",
             }}
@@ -59,21 +60,35 @@ export default function Home() {
           </motion.div>
 
           {/* Tagline */}
-          <motion.p className="hero-tagline" {...fadeUp} transition={{ delay: 0.4 }}>
+          <motion.p
+            className="hero-tagline"
+            {...fadeUp}
+            transition={{ delay: 0.42 }}
+          >
             Elevate Everything
           </motion.p>
 
           {/* Sub text */}
-          <motion.p className="hero-sub" {...fadeUp} transition={{ delay: 0.52 }}>
-            We help companies elevate everything — through branding, digital products
-            and communication systems.
+          <motion.p
+            className="hero-sub"
+            {...fadeUp}
+            transition={{ delay: 0.52 }}
+          >
+            We help companies elevate everything — through branding, digital
+            products and communication systems.
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons — here is the bigger gap */}
           <motion.div
-            style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}
             {...fadeUp}
             transition={{ delay: 0.65 }}
+            style={{
+              display: "flex",
+              gap: "32px",        // ← bigger space between buttons
+              flexWrap: "wrap",
+              justifyContent: "center",
+              marginTop: "34px",  // ← more gap above buttons
+            }}
           >
             <a href="/services" className="btn-primary">
               Services
@@ -85,7 +100,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Services Section */}
+      {/* Services section preview on home */}
       <section className="section-header section-block">
         <h2 className="section-title">Services</h2>
         <p className="section-desc">Two focused teams under one direction.</p>
