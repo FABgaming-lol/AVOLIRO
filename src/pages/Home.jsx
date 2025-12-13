@@ -11,6 +11,8 @@ export default function Home() {
 
   return (
     <div className="page-shell">
+
+      {/* ================= HERO ================= */}
       <section className="hero-block">
         <div className="hero-lightning-layer">
           <Lightning hue={220} xOffset={0} speed={0.8} intensity={0.5} size={0.85} />
@@ -18,40 +20,27 @@ export default function Home() {
         </div>
 
         <motion.div className="hero-content" initial="initial" animate="animate">
+
           {/* Eyebrow */}
           <motion.div {...fadeUp} transition={{ delay: 0.1 }}>
-            <div className="hero-eyebrow" style={{ fontSize: "20px", fontWeight: 700 }}>
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                  duration: 1,
-                  repeat: Infinity,
-                  repeatType: "mirror",
-                }}
-              >
-                Future-ready Businesses ✦
-              </motion.span>
+            <div className="hero-eyebrow" style={{ fontSize: "18px", fontWeight: 700 }}>
+              Parent company behind specialized digital divisions
             </div>
           </motion.div>
 
-          {/* AVOLIRO */}
-          <motion.h1
-            className="hero-title"
-            {...fadeUp}
-            transition={{ delay: 0.22 }}
-          >
-            Avoliro
+          {/* Title */}
+          <motion.h1 className="hero-title" {...fadeUp} transition={{ delay: 0.22 }}>
+            AVOLIRO
           </motion.h1>
 
           {/* by Yuvi */}
           <motion.div
             {...fadeUp}
-            transition={{ delay: 0.32 }}
+            transition={{ delay: 0.3 }}
             style={{
-              fontSize: "20px",
+              fontSize: "18px",
               fontWeight: 600,
-              opacity: 0.85,
+              opacity: 0.8,
               marginTop: "-6px",
               letterSpacing: "1px",
             }}
@@ -59,51 +48,65 @@ export default function Home() {
             by Yuvi
           </motion.div>
 
-          {/* Tagline */}
-          <motion.p
-            className="hero-tagline"
-            {...fadeUp}
-            transition={{ delay: 0.42 }}
-          >
-            Elevate Everything
+          {/* Core message */}
+          <motion.p className="hero-tagline" {...fadeUp} transition={{ delay: 0.4 }}>
+            We build business systems — not just brands or websites.
           </motion.p>
 
-          {/* Sub text */}
-          <motion.p
-            className="hero-sub"
-            {...fadeUp}
-            transition={{ delay: 0.52 }}
-          >
-            We help companies elevate everything — through branding, digital
-            products and communication systems.
+          <motion.p className="hero-sub" {...fadeUp} transition={{ delay: 0.52 }}>
+            AVOLIRO operates focused divisions that design, build, and scale modern
+            businesses under one strategic direction.
           </motion.p>
 
-          {/* CTA Buttons — here is the bigger gap */}
+          {/* CTAs */}
           <motion.div
             {...fadeUp}
             transition={{ delay: 0.65 }}
             style={{
               display: "flex",
-              gap: "32px",        // ← bigger space between buttons
+              gap: "32px",
               flexWrap: "wrap",
               justifyContent: "center",
-              marginTop: "34px",  // ← more gap above buttons
+              marginTop: "36px",
             }}
           >
-            <a href="/services" className="btn-primary">
-              Services
+            <a href="#ecosystem" className="btn-primary">
+              Explore the Ecosystem
             </a>
             <a href="/contact" className="btn-ghost">
-              Start project
+              Start a Project
             </a>
           </motion.div>
         </motion.div>
       </section>
 
-      {/* Services section preview on home */}
+      {/* ================= PROBLEM ================= */}
       <section className="section-header section-block">
-        <h2 className="section-title">Services</h2>
-        <p className="section-desc">Two focused teams under one direction.</p>
+        <h2 className="section-title">Why most businesses struggle</h2>
+        <p className="section-desc" style={{ maxWidth: "820px", margin: "0 auto" }}>
+          Branding, websites, and growth are usually handled by different people.
+          Nothing aligns. Quality drops. Growth becomes unstable.
+          <br /><br />
+          This isn’t a talent problem. It’s a system problem.
+        </p>
+      </section>
+
+      {/* ================= SOLUTION ================= */}
+      <section className="section-header section-block">
+        <h2 className="section-title">How AVOLIRO solves this</h2>
+        <p className="section-desc" style={{ maxWidth: "820px", margin: "0 auto" }}>
+          AVOLIRO is a parent company that operates specialized divisions under one
+          strategic system. Each division focuses deeply on its domain while AVOLIRO
+          ensures everything works together.
+        </p>
+      </section>
+
+      {/* ================= DIVISIONS ================= */}
+      <section id="ecosystem" className="section-header section-block">
+        <h2 className="section-title">Our divisions</h2>
+        <p className="section-desc">
+          Strategy at the center. Specialized execution at the edges.
+        </p>
       </section>
 
       <div className="grid grid-2">
@@ -113,10 +116,11 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="card-label">01 — Velano</div>
-          <h3 className="card-title">Web & Digital Systems</h3>
+          <div className="card-label">Division 01 — Velano</div>
+          <h3 className="card-title">Digital Systems</h3>
           <p className="card-body">
-            High-performance websites, dashboards and internal tools for modern companies.
+            Websites, web apps, dashboards, automation, and performance-driven
+            digital infrastructure built to scale.
           </p>
           <span className="project-link">Explore Velano ↗</span>
         </a>
@@ -127,14 +131,65 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="card-label">02 — InkForge</div>
-          <h3 className="card-title">Branding & Creative</h3>
+          <div className="card-label">Division 02 — InkForge</div>
+          <h3 className="card-title">Brand & Creative</h3>
           <p className="card-body">
-            Identity, rebranding and graphic design that keeps your brand consistent everywhere.
+            Brand identity, visual systems, and creative direction that shape how
+            businesses are seen, felt, and remembered.
           </p>
           <span className="project-link">Explore InkForge ↗</span>
         </a>
       </div>
+
+      {/* ================= SYSTEMS ================= */}
+      <section className="section-header section-block">
+        <h2 className="section-title">What we build</h2>
+        <p className="section-desc">
+          We don’t sell tasks. We build systems.
+        </p>
+      </section>
+
+      <div className="grid grid-3">
+        <div className="card">
+          <h3 className="card-title">Brand Foundation System</h3>
+          <p className="card-body">
+            Identity, visual language, and brand rules designed for long-term
+            consistency and clarity.
+          </p>
+        </div>
+
+        <div className="card">
+          <h3 className="card-title">Digital Presence System</h3>
+          <p className="card-body">
+            High-performance websites and digital infrastructure built for
+            credibility and scale.
+          </p>
+        </div>
+
+        <div className="card">
+          <h3 className="card-title">Growth System</h3>
+          <p className="card-body">
+            Brand, digital, and communication systems working together for serious,
+            long-term growth.
+          </p>
+        </div>
+      </div>
+
+      {/* ================= FINAL CTA ================= */}
+      <section className="section-header section-block">
+        <h2 className="section-title">Start with AVOLIRO</h2>
+        <p className="section-desc" style={{ maxWidth: "760px", margin: "0 auto" }}>
+          Every project starts at AVOLIRO. We qualify, structure, and route it to
+          the right division — with no confusion.
+        </p>
+
+        <div style={{ marginTop: "32px" }}>
+          <a href="/contact" className="btn-primary">
+            Start a Project
+          </a>
+        </div>
+      </section>
+
     </div>
   );
 }
