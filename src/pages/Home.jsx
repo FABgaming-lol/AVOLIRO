@@ -26,26 +26,16 @@ export default function Home() {
         </div>
 
         <motion.div className="hero-content" initial="initial" animate="animate">
-          {/* Eyebrow */}
           <motion.div {...fadeUp} transition={{ delay: 0.1 }}>
-            <div
-              className="hero-eyebrow"
-              style={{ fontSize: "18px", fontWeight: 700 }}
-            >
-              Parent company behind specialized digital divisions
+            <div className="hero-eyebrow" style={{ fontSize: "18px", fontWeight: 700 }}>
+              Parent company behind specialized business divisions
             </div>
           </motion.div>
 
-          {/* Title */}
-          <motion.h1
-            className="hero-title"
-            {...fadeUp}
-            transition={{ delay: 0.22 }}
-          >
+          <motion.h1 className="hero-title" {...fadeUp} transition={{ delay: 0.22 }}>
             AVOLIRO
           </motion.h1>
 
-          {/* by Yuvi */}
           <motion.div
             {...fadeUp}
             transition={{ delay: 0.3 }}
@@ -60,25 +50,15 @@ export default function Home() {
             by Yuvi
           </motion.div>
 
-          {/* Core message */}
-          <motion.p
-            className="hero-tagline"
-            {...fadeUp}
-            transition={{ delay: 0.4 }}
-          >
-            We build business systems — not just brands or websites.
+          <motion.p className="hero-tagline" {...fadeUp} transition={{ delay: 0.4 }}>
+            We build structured business growth — not disconnected services.
           </motion.p>
 
-          <motion.p
-            className="hero-sub"
-            {...fadeUp}
-            transition={{ delay: 0.52 }}
-          >
-            AVOLIRO operates focused divisions that design, build, and scale modern
-            businesses under one strategic direction.
+          <motion.p className="hero-sub" {...fadeUp} transition={{ delay: 0.52 }}>
+            AVOLIRO coordinates brand, digital systems, and marketing
+            under one strategic direction.
           </motion.p>
 
-          {/* CTAs */}
           <motion.div
             {...fadeUp}
             transition={{ delay: 0.65 }}
@@ -90,8 +70,8 @@ export default function Home() {
               marginTop: "36px",
             }}
           >
-            <a href="#ecosystem" className="btn-primary">
-              Explore the Ecosystem
+            <a href="#divisions" className="btn-primary">
+              Explore Divisions
             </a>
             <a href="/contact" className="btn-ghost">
               Start a Project
@@ -103,40 +83,32 @@ export default function Home() {
       {/* ================= PROBLEM ================= */}
       <section className="section-header section-block">
         <h2 className="section-title">Why most businesses struggle</h2>
-        <p
-          className="section-desc"
-          style={{ maxWidth: "820px", margin: "0 auto" }}
-        >
-          Branding, websites, and growth are usually handled by different people.
-          Nothing aligns. Quality drops. Growth becomes unstable.
-          <br />
-          <br />
-          This isn’t a talent problem. It’s a system problem.
+        <p className="section-desc" style={{ maxWidth: "820px", margin: "0 auto" }}>
+          Branding, websites, and marketing are usually handled in isolation.
+          Nothing aligns. Quality drops. Growth becomes inconsistent.
+          <br /><br />
+          This isn’t a talent problem. It’s a structure problem.
         </p>
       </section>
 
       {/* ================= SOLUTION ================= */}
       <section className="section-header section-block">
         <h2 className="section-title">How AVOLIRO solves this</h2>
-        <p
-          className="section-desc"
-          style={{ maxWidth: "820px", margin: "0 auto" }}
-        >
-          AVOLIRO is a parent company that operates specialized divisions under one
-          strategic system. Each division focuses deeply on its domain while AVOLIRO
-          ensures everything works together.
+        <p className="section-desc" style={{ maxWidth: "820px", margin: "0 auto" }}>
+          AVOLIRO acts as the central layer — aligning specialized divisions
+          so execution moves in one direction.
         </p>
       </section>
 
       {/* ================= DIVISIONS ================= */}
-      <section id="ecosystem" className="section-header section-block">
+      <section id="divisions" className="section-header section-block">
         <h2 className="section-title">Our divisions</h2>
         <p className="section-desc">
-          Strategy at the center. Specialized execution at the edges.
+          Focused execution. Central strategy.
         </p>
       </section>
 
-      <div className="grid grid-2">
+      <div className="grid grid-3">
         <a
           className="card card-link"
           href="https://velano-portfolio.vercel.app/"
@@ -146,8 +118,8 @@ export default function Home() {
           <div className="card-label">Division 01 — Velano</div>
           <h3 className="card-title">Digital Systems</h3>
           <p className="card-body">
-            Websites, web apps, dashboards, automation, and performance-driven
-            digital infrastructure built to scale.
+            Websites, web apps, dashboards, automation,
+            and scalable digital infrastructure.
           </p>
           <span className="project-link">Explore Velano ↗</span>
         </a>
@@ -161,47 +133,32 @@ export default function Home() {
           <div className="card-label">Division 02 — InkForge</div>
           <h3 className="card-title">Brand & Creative</h3>
           <p className="card-body">
-            Brand identity, visual systems, and creative direction that shape how
-            businesses are seen, felt, and remembered.
+            Brand identity, visual systems, and creative direction
+            that define perception.
           </p>
           <span className="project-link">Explore InkForge ↗</span>
         </a>
-      </div>
 
-      {/* ================= SYSTEMS & PLATFORMS (BRANDORA) ================= */}
-      <section className="section-header section-block">
-        <h2 className="section-title">Systems & Platforms</h2>
-        <p
-          className="section-desc"
-          style={{ maxWidth: "820px", margin: "0 auto" }}
+        <a
+          className="card card-link"
+          href="#"
+          onClick={(e) => e.preventDefault()}
         >
-          In addition to its divisions, AVOLIRO develops proprietary systems that
-          bring structure, consistency, and scalability to long-term execution.
-        </p>
-      </section>
-
-      <div className="grid grid-1">
-        <div className="card">
-          <div className="card-label">Internal Platform — Brandora</div>
-          <h3 className="card-title">Brand Operating System</h3>
+          <div className="card-label">Division 03 — Brandora</div>
+          <h3 className="card-title">Marketing & Growth</h3>
           <p className="card-body">
-            Brandora is AVOLIRO’s internal brand operating system.
-            It defines the rules, structure, and logic behind how brands are built,
-            managed, and scaled over time.
-            <br />
-            <br />
-            Brandora is not a service.
-            It is proprietary infrastructure implemented through InkForge.
+            Strategy-led marketing, content systems,
+            distribution, and growth execution.
           </p>
-          <span className="project-link">Proprietary System</span>
-        </div>
+          <span className="project-link">Brandora (launching)</span>
+        </a>
       </div>
 
-      {/* ================= SYSTEMS (CLIENT-FACING) ================= */}
+      {/* ================= SYSTEMS ================= */}
       <section className="section-header section-block">
         <h2 className="section-title">What we build</h2>
         <p className="section-desc">
-          We don’t sell tasks. We build systems.
+          We don’t sell tasks. We design systems.
         </p>
       </section>
 
@@ -209,24 +166,21 @@ export default function Home() {
         <div className="card">
           <h3 className="card-title">Brand Foundation System</h3>
           <p className="card-body">
-            Identity, visual language, and brand rules designed for long-term
-            consistency and clarity.
+            Identity and visual structure — executed by InkForge.
           </p>
         </div>
 
         <div className="card">
           <h3 className="card-title">Digital Presence System</h3>
           <p className="card-body">
-            High-performance websites and digital infrastructure built for
-            credibility and scale.
+            Platforms and infrastructure — executed by Velano.
           </p>
         </div>
 
         <div className="card">
           <h3 className="card-title">Growth System</h3>
           <p className="card-body">
-            Brand, digital, and communication systems working together for serious,
-            long-term growth.
+            Marketing strategy and distribution — executed by Brandora.
           </p>
         </div>
       </div>
@@ -234,12 +188,9 @@ export default function Home() {
       {/* ================= FINAL CTA ================= */}
       <section className="section-header section-block">
         <h2 className="section-title">Start with AVOLIRO</h2>
-        <p
-          className="section-desc"
-          style={{ maxWidth: "760px", margin: "0 auto" }}
-        >
-          Every project starts at AVOLIRO. We qualify, structure, and route it to
-          the right division — with no confusion.
+        <p className="section-desc" style={{ maxWidth: "760px", margin: "0 auto" }}>
+          Every project begins at AVOLIRO.
+          We assess, structure, and route execution correctly.
         </p>
 
         <div style={{ marginTop: "32px" }}>
