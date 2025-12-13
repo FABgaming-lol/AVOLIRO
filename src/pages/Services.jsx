@@ -63,12 +63,13 @@ export default function Services() {
 
         <div className="services-list">
           <div className="service-card">
-            <h4 className="service-title">Integrated Brand + Digital System</h4>
+            <h4 className="service-title">Marketing & Distribution System</h4>
             <p className="service-body">
-              A long-term system where branding, digital infrastructure,
-              and communication work together under one strategic direction.
+              A structured growth system where brand, digital platforms,
+              and communication are aligned to scale reach and demand
+              over time.
             </p>
-            <span className="service-link">Led by AVOLIRO</span>
+            <span className="service-link">Executed by Brandora · Directed by AVOLIRO</span>
           </div>
         </div>
       </motion.section>
@@ -105,6 +106,19 @@ export default function Services() {
               that define how brands are seen and remembered.
             </p>
             <span className="service-link">Explore InkForge ↗</span>
+          </a>
+
+          <a
+            href="#"
+            onClick={(e) => e.preventDefault()}
+            className="service-card"
+          >
+            <h4 className="service-title">Brandora — Marketing & Growth</h4>
+            <p className="service-body">
+              Strategy-led marketing, content systems, distribution,
+              and growth execution built to scale reach sustainably.
+            </p>
+            <span className="service-link">Brandora (launching)</span>
           </a>
 
         </div>
