@@ -111,7 +111,7 @@ export default function Home() {
       <div className="grid grid-3">
         <a
           className="card card-link"
-          href="https://velano-portfolio.vercel.app/"
+          href="https://velano-by-avoliro.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
         >

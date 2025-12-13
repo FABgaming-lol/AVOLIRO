@@ -81,7 +81,7 @@ export default function Services() {
         <div className="services-list">
 
           <a
-            href="https://velano-portfolio.vercel.app/"
+            href="https://velano-by-avoliro.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="service-card"
