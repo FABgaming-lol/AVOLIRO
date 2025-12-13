@@ -17,24 +17,29 @@ export default function Services() {
 
       {/* ================= HERO ================= */}
       <motion.section className="services-hero" {...fadeUp}>
-        <h1 className="services-main-title">What We Build</h1>
+        <h1 className="services-main-title">Business Systems</h1>
         <p className="services-sub">
-          AVOLIRO does not sell isolated services.
+          AVOLIRO delivers complete business systems.
           <br />
-          We design and deliver complete business systems.
+          Individual services are not offered in isolation.
         </p>
       </motion.section>
 
       {/* ================= SYSTEM 01 ================= */}
-      <motion.section className="services-section" {...fadeUp} transition={{ delay: 0.15 }}>
+      <motion.section
+        className="services-section"
+        {...fadeUp}
+        transition={{ delay: 0.15 }}
+      >
         <h3 className="services-cat">Brand Foundation System</h3>
 
         <div className="services-list">
           <div className="service-card">
-            <h4 className="service-title">Identity & Brand Structure</h4>
+            <h4 className="service-title">Brand Identity and Structure</h4>
             <p className="service-body">
-              A complete brand foundation including identity, visual language,
-              and brand rules — built for clarity, consistency, and long-term growth.
+              This system defines the visual identity, brand structure,
+              and usage guidelines required to maintain consistency
+              across all brand materials.
             </p>
             <span className="service-link">Executed by InkForge</span>
           </div>
@@ -42,15 +47,20 @@ export default function Services() {
       </motion.section>
 
       {/* ================= SYSTEM 02 ================= */}
-      <motion.section className="services-section" {...fadeUp} transition={{ delay: 0.3 }}>
+      <motion.section
+        className="services-section"
+        {...fadeUp}
+        transition={{ delay: 0.3 }}
+      >
         <h3 className="services-cat">Digital Presence System</h3>
 
         <div className="services-list">
           <div className="service-card">
-            <h4 className="service-title">Websites & Digital Infrastructure</h4>
+            <h4 className="service-title">Websites and Digital Infrastructure</h4>
             <p className="service-body">
-              High-performance websites, dashboards, and digital systems that
-              establish credibility and scale with your business.
+              This system includes websites, dashboards, and supporting
+              digital infrastructure required for daily business
+              operations and scalability.
             </p>
             <span className="service-link">Executed by Velano</span>
           </div>
@@ -58,25 +68,35 @@ export default function Services() {
       </motion.section>
 
       {/* ================= SYSTEM 03 ================= */}
-      <motion.section className="services-section" {...fadeUp} transition={{ delay: 0.45 }}>
+      <motion.section
+        className="services-section"
+        {...fadeUp}
+        transition={{ delay: 0.45 }}
+      >
         <h3 className="services-cat">Growth System</h3>
 
         <div className="services-list">
           <div className="service-card">
-            <h4 className="service-title">Marketing & Distribution System</h4>
+            <h4 className="service-title">Marketing and Distribution</h4>
             <p className="service-body">
-              A structured growth system where brand, digital platforms,
-              and communication are aligned to scale reach and demand
-              over time.
+              This system aligns marketing strategy, content planning,
+              and distribution channels to support steady and
+              sustainable growth over time.
             </p>
-            <span className="service-link">Executed by Brandora · Directed by AVOLIRO</span>
+            <span className="service-link">
+              Executed by Brandora · Directed by AVOLIRO
+            </span>
           </div>
         </div>
       </motion.section>
 
       {/* ================= DIVISIONS ================= */}
-      <motion.section className="services-section" {...fadeUp} transition={{ delay: 0.6 }}>
-        <h3 className="services-cat">Our Execution Divisions</h3>
+      <motion.section
+        className="services-section"
+        {...fadeUp}
+        transition={{ delay: 0.6 }}
+      >
+        <h3 className="services-cat">Execution Divisions</h3>
 
         <div className="services-list">
 
@@ -88,10 +108,11 @@ export default function Services() {
           >
             <h4 className="service-title">Velano — Digital Systems</h4>
             <p className="service-body">
-              Engineering-focused execution of websites, apps, automation,
-              and performance-critical digital infrastructure.
+              Responsible for the engineering and technical execution
+              of websites, applications, automation, and digital
+              infrastructure.
             </p>
-            <span className="service-link">Explore Velano ↗</span>
+            <span className="service-link">View Velano ↗</span>
           </a>
 
           <a
@@ -102,10 +123,10 @@ export default function Services() {
           >
             <h4 className="service-title">InkForge — Brand & Creative</h4>
             <p className="service-body">
-              Visual identity, brand systems, and creative direction
-              that define how brands are seen and remembered.
+              Responsible for brand identity, visual systems,
+              and creative direction across all brand materials.
             </p>
-            <span className="service-link">Explore InkForge ↗</span>
+            <span className="service-link">View InkForge ↗</span>
           </a>
 
           <a
@@ -115,8 +136,8 @@ export default function Services() {
           >
             <h4 className="service-title">Brandora — Marketing & Growth</h4>
             <p className="service-body">
-              Strategy-led marketing, content systems, distribution,
-              and growth execution built to scale reach sustainably.
+              Responsible for marketing strategy, content planning,
+              distribution, and growth execution.
             </p>
             <span className="service-link">Brandora (launching)</span>
           </a>

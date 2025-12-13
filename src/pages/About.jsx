@@ -9,7 +9,8 @@ export default function About() {
 
   return (
     <div className="page-shell">
-      {/* Header */}
+
+      {/* ================= HEADER ================= */}
       <motion.header
         className="section-header"
         initial="hidden"
@@ -17,13 +18,13 @@ export default function About() {
         transition={{ duration: 0.6 }}
         variants={fadeUp}
       >
-        <h2 className="section-title">About Avoliro</h2>
+        <h2 className="section-title">About AVOLIRO</h2>
         <p className="section-desc">
-          We elevate everything — your presence, performance & potential.
+          A structured parent company for branding, digital systems, and marketing.
         </p>
       </motion.header>
 
-      {/* Who We Are */}
+      {/* ================= OVERVIEW ================= */}
       <motion.div
         className="section-body"
         style={{ maxWidth: "820px" }}
@@ -34,13 +35,32 @@ export default function About() {
         variants={fadeUp}
       >
         <p>
-          Avoliro is a modern design & technology studio built for forward-thinking
-          businesses. We craft bold brands and high-performance digital systems that
-          help businesses launch faster, operate smarter, and scale bigger.
+          AVOLIRO is a parent company that operates specialized divisions focused on
+          branding, digital systems, and marketing. The company provides structure,
+          coordination, and oversight to ensure that all work is aligned and
+          executed consistently.
         </p>
       </motion.div>
 
-      {/* Sub Brands */}
+      {/* ================= STRUCTURE ================= */}
+      <motion.div
+        className="section-body"
+        style={{ maxWidth: "820px", marginTop: "24px" }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.25 }}
+        variants={fadeUp}
+      >
+        <p>
+          Rather than offering isolated services, AVOLIRO manages a system-based
+          approach. Each division is responsible for a specific area of execution,
+          while AVOLIRO maintains strategic direction and alignment across all
+          divisions.
+        </p>
+      </motion.div>
+
+      {/* ================= DIVISIONS ================= */}
       <motion.h3
         className="section-category"
         style={{ marginTop: "60px" }}
@@ -48,9 +68,9 @@ export default function About() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.25 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
       >
-        Sub-Brands & Core Capabilities
+        Company Divisions
       </motion.h3>
 
       <motion.div
@@ -79,9 +99,10 @@ export default function About() {
         >
           <strong style={{ fontSize: "20px" }}>Velano</strong>
           <p style={{ opacity: 0.85, marginTop: "6px" }}>
-            Web & Digital Systems
+            Digital Systems
             <br />
-            High-performance websites, dashboards, automation & digital products.
+            Responsible for websites, applications, dashboards, automation,
+            and digital infrastructure.
           </p>
         </motion.div>
 
@@ -98,26 +119,49 @@ export default function About() {
         >
           <strong style={{ fontSize: "20px" }}>InkForge</strong>
           <p style={{ opacity: 0.85, marginTop: "6px" }}>
-            Branding & Creative
+            Brand & Creative
             <br />
-            Identity design, re-branding, marketing visuals & communication systems.
+            Responsible for brand identity, visual systems,
+            and creative direction.
+          </p>
+        </motion.div>
+
+        {/* Brandora */}
+        <motion.div
+          className="brand-card"
+          variants={fadeUp}
+          style={{
+            padding: "22px 26px",
+            borderRadius: "14px",
+            background: "rgba(255,255,255,0.03)",
+            border: "1px solid rgba(255,255,255,0.07)",
+          }}
+        >
+          <strong style={{ fontSize: "20px" }}>Brandora</strong>
+          <p style={{ opacity: 0.85, marginTop: "6px" }}>
+            Marketing & Growth
+            <br />
+            Responsible for marketing strategy, content planning,
+            distribution, and growth execution.
           </p>
         </motion.div>
       </motion.div>
 
-      {/* Final message */}
+      {/* ================= FINAL STATEMENT ================= */}
       <motion.p
         className="section-body"
-        style={{ marginTop: "38px", maxWidth: "820px" }}
+        style={{ marginTop: "42px", maxWidth: "820px" }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.35 }}
         variants={fadeUp}
       >
-        Together, Velano + InkForge deliver a complete growth ecosystem: presence, 
-        performance, communication, and trust — everything under one strategic direction.
+        AVOLIRO ensures that all divisions operate under a shared structure and
+        direction. This approach improves consistency, reduces fragmentation,
+        and supports long-term business growth.
       </motion.p>
+
     </div>
   );
 }
