@@ -130,8 +130,9 @@ export default function Services() {
           </a>
 
           <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
+            href="https://brandora-by-avoliro.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="service-card"
           >
             <h4 className="service-title">Brandora — Marketing & Growth</h4>
@@ -139,7 +140,7 @@ export default function Services() {
               Responsible for marketing strategy, content planning,
               distribution, and growth execution.
             </p>
-            <span className="service-link">Brandora (launching)</span>
+            <span className="service-link">View Brandora ↗</span>
           </a>
 
         </div>

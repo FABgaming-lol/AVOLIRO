@@ -35,7 +35,11 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <motion.h1 className="hero-title" {...fadeUp} transition={{ delay: 0.22 }}>
+          <motion.h1
+            className="hero-title"
+            {...fadeUp}
+            transition={{ delay: 0.22 }}
+          >
             AVOLIRO
           </motion.h1>
 
@@ -53,12 +57,20 @@ export default function Home() {
             by Yuvi
           </motion.div>
 
-          <motion.p className="hero-tagline" {...fadeUp} transition={{ delay: 0.4 }}>
+          <motion.p
+            className="hero-tagline"
+            {...fadeUp}
+            transition={{ delay: 0.4 }}
+          >
             AVOLIRO builds structured systems for branding, digital platforms,
             and marketing.
           </motion.p>
 
-          <motion.p className="hero-sub" {...fadeUp} transition={{ delay: 0.52 }}>
+          <motion.p
+            className="hero-sub"
+            {...fadeUp}
+            transition={{ delay: 0.52 }}
+          >
             The company manages multiple divisions and ensures that branding,
             digital systems, and marketing operate together under a single
             direction.
@@ -88,7 +100,10 @@ export default function Home() {
       {/* ================= PROBLEM ================= */}
       <section className="section-header section-block">
         <h2 className="section-title">Common business challenges</h2>
-        <p className="section-desc" style={{ maxWidth: "820px", margin: "0 auto" }}>
+        <p
+          className="section-desc"
+          style={{ maxWidth: "820px", margin: "0 auto" }}
+        >
           Branding, websites, and marketing are often handled by different people
           or teams. When these areas are not aligned, results become inconsistent
           and growth slows.
@@ -100,7 +115,10 @@ export default function Home() {
       {/* ================= SOLUTION ================= */}
       <section className="section-header section-block">
         <h2 className="section-title">The AVOLIRO approach</h2>
-        <p className="section-desc" style={{ maxWidth: "820px", margin: "0 auto" }}>
+        <p
+          className="section-desc"
+          style={{ maxWidth: "820px", margin: "0 auto" }}
+        >
           AVOLIRO provides a central structure that coordinates all work across
           its divisions, ensuring consistency and long-term alignment.
         </p>
@@ -147,8 +165,9 @@ export default function Home() {
 
         <a
           className="card card-link"
-          href="#"
-          onClick={(e) => e.preventDefault()}
+          href="https://brandora-by-avoliro.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div className="card-label">Division 03 — Brandora</div>
           <h3 className="card-title">Marketing & Growth</h3>
@@ -156,7 +175,7 @@ export default function Home() {
             Marketing strategy, content planning, distribution,
             and growth execution.
           </p>
-          <span className="project-link">Brandora (launching)</span>
+          <span className="project-link">View Brandora ↗</span>
         </a>
       </div>
 
@@ -186,7 +205,8 @@ export default function Home() {
         <div className="card">
           <h3 className="card-title">Growth System</h3>
           <p className="card-body">
-            Marketing strategy and distribution systems, executed by Brandora.
+            Marketing strategy and distribution systems,
+            executed by Brandora.
           </p>
         </div>
       </div>
@@ -194,7 +214,10 @@ export default function Home() {
       {/* ================= FINAL CTA ================= */}
       <section className="section-header section-block">
         <h2 className="section-title">Project initiation</h2>
-        <p className="section-desc" style={{ maxWidth: "760px", margin: "0 auto" }}>
+        <p
+          className="section-desc"
+          style={{ maxWidth: "760px", margin: "0 auto" }}
+        >
           All projects begin with AVOLIRO. Requirements are reviewed and
           assigned to the appropriate division.
         </p>
